@@ -30,7 +30,6 @@ import {
 } from '../../../stores/settingsStore';
 import { Provider, ProviderType } from '../../../types/Provider';
 import { ProviderConfigFactory } from '../../../services/providers/ProviderConfigFactory';
-import { useAuth } from '../../../lib/auth/hooks';
 import { isElectron } from '../../../utils/environment';
 import { useAnalytics } from '../../../lib/analytics';
 

@@ -12,7 +12,6 @@ import {
   useLocalInferenceSettings
 } from '../../stores/settingsStore';
 import { useModelStatuses } from '../../stores/modelStore';
-import { useAuth } from '../../lib/auth/hooks';
 import { Provider } from '../../types/Provider';
 
 /**
@@ -39,29 +38,7 @@ export function SettingsInitializer() {
   const modelStatuses = useModelStatuses();
   const localInferenceSettings = useLocalInferenceSettings();
 
-  // Auto-fetch and validate EburonAI API key when user logs in or provider changes
-  useEffect(() => {
-    const handleEburonAI = async () => {
-      if (provider === Provider.EBURON_AI && isSignedIn && getToken) {
-        console.log('[SettingsInitializer] EburonAI provider selected, ensuring API key...');
-        const hasKey = await ensureKizunaApiKey(getToken, isSignedIn);
-        
-        // If we successfully got the key, validate it
-        if (hasKey && !isValidatingRef.current) {
-          isValidatingRef.current = true;
-          console.log('[SettingsInitializer] EburonAI API key obtained, validating...');
-          setTimeout(async () => {
-            await validateApiKey(getToken);
-            isValidatingRef.current = false;
-          }, 100);
-        }
-      }
-    };
-    
-    handleEburonAI();
-  }, [provider, isSignedIn, getToken, ensureKizunaApiKey, validateApiKey]);
-  
-  // Auto-validate when provider changes (for non-EburonAI providers)
+  // Auto-validate when provider changes
   useEffect(() => {
     // Only proceed if settings have been loaded
     if (!settingsLoaded) {
