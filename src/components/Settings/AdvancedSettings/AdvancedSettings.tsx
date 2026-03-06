@@ -4,11 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useIsSessionActive } from '../../../stores/sessionStore';
 import { useOnboarding } from '../../../contexts/OnboardingContext';
 import {
-  useProvider,
-  useAvailableModels,
-  useLoadingModels,
-  useFetchAvailableModels,
-  useGetProcessedSystemInstructions,
   useSettingsNavigationTarget,
   useNavigateToSettings,
 } from '../../../stores/settingsStore';
@@ -35,16 +30,6 @@ const AdvancedSettings: React.FC<AdvancedSettingsProps> = ({ toggleSettings }) =
 
   // Audio context
   const { isSystemAudioCaptureEnabled, isMonitorDeviceOn } = useAudioContext();
-
-  // Get current provider configuration
-  const currentProviderConfig = React.useMemo(() => {
-    try {
-      return ProviderConfigFactory.getConfig(provider || Provider.OPENAI);
-    } catch (error) {
-      console.warn(`[AdvancedSettings] Unknown provider: ${provider}, falling back to OpenAI`);
-      return ProviderConfigFactory.getConfig(Provider.OPENAI);
-    }
-  }, [provider]);
 
   // Navigation target for scroll-to-section
   const settingsNavigationTarget = useSettingsNavigationTarget();
