@@ -11,15 +11,6 @@ Eburon translates speech in real-time using on-device AI or cloud providers. It 
 
 ## Features
 
-### AI Providers
-- **Local Inference** — fully offline ASR, translation & TTS via WASM/WebGPU. No API key needed.
-- **OpenAI** — Realtime API (`gpt-4o-realtime`, `gpt-4o-mini-realtime`)
-- **Google Gemini** — Live audio (`gemini-2.0-flash-live`, `gemini-2.5-flash-preview`)
-- **Palabra.ai** — Speech-to-speech via WebRTC
-- **Volcengine ST** — Real-time speech translation
-- **Doubao AST 2.0** — Speech-to-speech via protobuf/WebSocket
-- **OpenAI Compatible** — Any custom endpoint (Electron only)
-
 ### Local Inference (Edge AI)
 - 48 ASR models (99+ languages) via sherpa-onnx WASM & Whisper WebGPU
 - 55+ translation language pairs (Opus-MT) + Qwen 2.5/3/3.5 multilingual LLMs
