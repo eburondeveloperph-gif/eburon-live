@@ -8,7 +8,7 @@
 
 <p align="center">   
   <a href="LICENSE" target="_blank">
-    <img alt="AGPL-3.0 License" src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg?style=flat-square" />
+    <img alt="Proprietary License" src="https://img.shields.io/badge/license-Proprietary-red.svg?style=flat-square" />
   </a>
   
   <!-- Build and Release Badge -->
