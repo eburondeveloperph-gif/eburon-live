@@ -108,7 +108,7 @@ export class PalabraAIProviderConfig {
   private static readonly LANGUAGES: LanguageOption[] = PalabraAIProviderConfig.SOURCE_LANGUAGES;
 
   // Helper method to get target languages for a given source language
-  static getTargetLanguagesForSource(sourceLanguage: string): LanguageOption[] {
+  static getTargetLanguagesForSource(_sourceLanguage: string): LanguageOption[] {
     // Return all target languages - PalabraAI supports most language pairs
     return PalabraAIProviderConfig.TARGET_LANGUAGES;
   }
