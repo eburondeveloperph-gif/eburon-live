@@ -191,20 +191,20 @@ build_apk() {
         return 1
     fi
 
-    # Android Gradle plugin requires JDK 17-21 (not 25+)
-    # Try to find a compatible JDK
+    # Capacitor 8 / AGP 8.13 requires JDK 21+ (not 17, not 25+)
+    # Try to find a compatible JDK — prefer 21 over 17
     if [[ "$(uname)" == "Darwin" ]]; then
-        JDK17_HOME=$(/usr/libexec/java_home -v 17 2>/dev/null || true)
         JDK21_HOME=$(/usr/libexec/java_home -v 21 2>/dev/null || true)
-        if [ -n "$JDK17_HOME" ]; then
-            export JAVA_HOME="$JDK17_HOME"
-            log "Using JDK 17: $JAVA_HOME"
-        elif [ -n "$JDK21_HOME" ]; then
+        JDK17_HOME=$(/usr/libexec/java_home -v 17 2>/dev/null || true)
+        if [ -n "$JDK21_HOME" ]; then
             export JAVA_HOME="$JDK21_HOME"
             log "Using JDK 21: $JAVA_HOME"
+        elif [ -n "$JDK17_HOME" ]; then
+            export JAVA_HOME="$JDK17_HOME"
+            log "Using JDK 17: $JAVA_HOME"
         else
-            warn "No JDK 17 or 21 found. Android build may fail with newer JDKs."
-            warn "Install: brew install --cask temurin@17"
+            warn "No JDK 21 or 17 found. Android build may fail with newer JDKs."
+            warn "Install: brew install --cask temurin@21"
         fi
     fi
 
