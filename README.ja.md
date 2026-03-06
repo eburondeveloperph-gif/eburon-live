@@ -1,9 +1,9 @@
 <p align="center">
-  <img width="200" src="https://github.com/kizuna-ai-lab/Eburon/raw/main/src/assets/logo.png" alt="Eburon Logo">
+  <img width="200" src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/src/assets/logo.png" alt="Eburon Logo">
 </p>
 
 <p align="center">
-  <em>オンデバイスAIとクラウドプロバイダーによるリアルタイム音声翻訳 — OpenAI, Google Gemini, Palabra.ai, Kizuna AI, Volcengine など</em>
+  <em>オンデバイスAIとクラウドプロバイダーによるリアルタイム音声翻訳 — OpenAI, Google Gemini, Palabra.ai, Eburon AI, Volcengine など</em>
 </p>
 
 <p align="center">
@@ -12,8 +12,8 @@
   </a>
   
   <!-- Build and Release Badge -->
-  <a href="https://github.com/kizuna-ai-lab/Eburon/actions/workflows/build.yml" target="_blank">
-    <img alt="Build and Release" src="https://github.com/kizuna-ai-lab/Eburon/actions/workflows/build.yml/badge.svg" />
+  <a href="https://github.com/eburondeveloperph-gif/eburon-live/actions/workflows/build.yml" target="_blank">
+    <img alt="Build and Release" src="https://github.com/eburondeveloperph-gif/eburon-live/actions/workflows/build.yml/badge.svg" />
   </a>
   
   <!-- OpenAI Badge -->
@@ -29,7 +29,7 @@
   <img alt="Vibe Coding" src="https://img.shields.io/badge/built%20with-vibe%20coding-ff69b4?style=flat-square" />
   
   <!-- DeepWiki Badge -->
-  <a href="https://deepwiki.com/kizuna-ai-lab/Eburon" target="_blank">
+  <a href="https://deepwiki.com/eburondeveloperph-gif/eburon-live" target="_blank">
     <img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg" />
   </a>
 </p>
@@ -40,7 +40,7 @@
 
 # なぜEburonなのか？
 
-Eburonは、OpenAI、Google Gemini、Palabra.ai、Kizuna AI、Volcengine ST、Doubao AST 2.0、OpenAI互換APIを使用してリアルタイム音声翻訳を提供するクロスプラットフォームデスクトップアプリケーション兼ブラウザ拡張機能です。Windows、macOS、Linuxで利用でき、音声入力をキャプチャし、高度なAIモデルで処理し、リアルタイムで翻訳された出力を配信することで、ライブ会話における言語の壁を取り除きます。v0.15.0では**ローカル推論**を導入 — ASR、翻訳、TTSのすべてがCPU（WASM）とWebGPUを通じて完全にデバイス上で実行され、データがデバイスの外に出ることは一切ありません。
+Eburonは、OpenAI、Google Gemini、Palabra.ai、Eburon AI、Volcengine ST、Doubao AST 2.0、OpenAI互換APIを使用してリアルタイム音声翻訳を提供するクロスプラットフォームデスクトップアプリケーション兼ブラウザ拡張機能です。Windows、macOS、Linuxで利用でき、音声入力をキャプチャし、高度なAIモデルで処理し、リアルタイムで翻訳された出力を配信することで、ライブ会話における言語の壁を取り除きます。v0.15.0では**ローカル推論**を導入 — ASR、翻訳、TTSのすべてがCPU（WASM）とWebGPUを通じて完全にデバイス上で実行され、データがデバイスの外に出ることは一切ありません。
 
 https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
@@ -50,10 +50,10 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
 <p>
   <a href="https://chromewebstore.google.com/detail/ppmihnhelgfpjomhjhpecobloelicnak?utm_source=item-share-cb" target="_blank">
-    <img alt="Available on Chrome Web Store" src="https://github.com/kizuna-ai-lab/Eburon/raw/main/assets/chrome-web-store-badge.png" height="60" />
+    <img alt="Available on Chrome Web Store" src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/assets/chrome-web-store-badge.png" height="60" />
   </a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/Eburon-aipowered-live-/dcmmcdkeibkalgdjlahlembodjhijhkm" target="_blank">
-    <img alt="Available on Microsoft Edge Add-ons" src="https://github.com/kizuna-ai-lab/Eburon/raw/main/assets/edge-addons-badge.png" height="60" />
+    <img alt="Available on Microsoft Edge Add-ons" src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/assets/edge-addons-badge.png" height="60" />
   </a>
   <a href="https://www.producthunt.com/posts/Eburon?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-Eburon" target="_blank">
     <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=967440&theme=light&t=1748250774125" alt="Eburon - Live&#0032;speech&#0032;translation&#0032;with&#0032;real&#0045;time&#0032;AI | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
@@ -64,7 +64,7 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
 ブラウザ拡張機能の最新版をインストールしたい場合：
 
-1. [リリースページ](https://github.com/kizuna-ai-lab/Eburon/releases)から最新の`Eburon-extension.zip`をダウンロード
+1. [リリースページ](https://github.com/eburondeveloperph-gif/eburon-live/releases)から最新の`Eburon-extension.zip`をダウンロード
 2. zipファイルをフォルダに解凍
 3. Chrome/Chromiumを開き、`chrome://extensions/`にアクセス
 4. 右上の「デベロッパーモード」を有効にする
@@ -74,12 +74,12 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 # 機能
 
 ### AI翻訳
-- **8つのAIプロバイダー**: OpenAI、Google Gemini、Palabra.ai、Kizuna AI、Volcengine ST、Doubao AST 2.0、OpenAI互換、ローカル推論
+- **8つのAIプロバイダー**: OpenAI、Google Gemini、Palabra.ai、Eburon AI、Volcengine ST、Doubao AST 2.0、OpenAI互換、ローカル推論
 - **サポートされているモデル**:
   - **OpenAI**: `gpt-4o-realtime-preview`, `gpt-4o-mini-realtime-preview`, `gpt-realtime`, `gpt-realtime-2025-08-28`
   - **Google Gemini**: `gemini-2.0-flash-live-001`, `gemini-2.5-flash-preview-native-audio-dialog`
   - **Palabra.ai**: WebRTCによるリアルタイム音声翻訳
-  - **Kizuna AI**: バックエンド管理認証によるOpenAI互換モデル
+  - **Eburon AI**: バックエンド管理認証によるOpenAI互換モデル
   - **OpenAI互換**: カスタムOpenAI互換APIエンドポイントのサポート（Electronのみ）
   - **Volcengine ST**: V4署名認証によるリアルタイム音声翻訳
   - **Doubao AST 2.0**: protobuf-over-WebSocketによる音声翻訳
@@ -137,7 +137,7 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
   - **OpenAI**: OpenAIのAPIキー
   - **Google Gemini**: Google AI StudioのAPIキー
   - **Palabra.ai**: クライアントIDとクライアントシークレット
-  - **Kizuna AI**: アカウントにサインインしてバックエンド管理のAPIキーに自動アクセス
+  - **Eburon AI**: アカウントにサインインしてバックエンド管理のAPIキーに自動アクセス
   - **Volcengine ST**: アクセスキーIDとシークレットアクセスキー
   - **Doubao AST 2.0**: APP IDとアクセストークン
   - **OpenAI互換**: APIキーとカスタムエンドポイントURL（Electronのみ）
@@ -151,7 +151,7 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
 1. リポジトリをクローン
    ```bash
-   git clone https://github.com/kizuna-ai-lab/Eburon.git
+   git clone https://github.com/eburondeveloperph-gif/eburon-live.git
    cd Eburon
    ```
 
@@ -172,7 +172,7 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
 ## パッケージから
 
-[リリースページ](https://github.com/kizuna-ai-lab/Eburon/releases)からお使いのプラットフォームに適したパッケージをダウンロードしてください：
+[リリースページ](https://github.com/eburondeveloperph-gif/eburon-live/releases)からお使いのプラットフォームに適したパッケージをダウンロードしてください：
 
 ### Windows
 `.exe`インストーラーをダウンロードして実行します：
@@ -199,20 +199,20 @@ sudo dpkg -i Eburon_x.y.z_amd64.deb
 1. **APIキーを設定**:
    
    <p align="center">
-     <img width="600" src="https://github.com/kizuna-ai-lab/Eburon/raw/main/screenshots/api-settings.png" alt="API Settings" />
+     <img width="600" src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/screenshots/api-settings.png" alt="API Settings" />
    </p>
    
    - 右上の設定ボタンをクリック
-   - 希望のプロバイダー（OpenAI、Gemini、Palabra、Kizuna AI、Volcengine ST、Doubao AST 2.0、またはOpenAI互換）を選択
+   - 希望のプロバイダー（OpenAI、Gemini、Palabra、Eburon AI、Volcengine ST、Doubao AST 2.0、またはOpenAI互換）を選択
    - ユーザー管理プロバイダーの場合：APIキーを入力し、「検証」をクリック。Palabraの場合、クライアントIDとクライアントシークレットを入力。Volcengine STの場合、アクセスキーIDとシークレットを入力。Doubao AST 2.0の場合、APP IDとアクセストークンを入力。OpenAI互換エンドポイントの場合（Electronのみ）、APIキーとカスタムエンドポイントURLの両方を設定します。
-   - Kizuna AIの場合：アカウントにサインインしてバックエンド管理のAPIキーに自動アクセスします。
+   - Eburon AIの場合：アカウントにサインインしてバックエンド管理のAPIキーに自動アクセスします。
    - **ローカル推論の場合**：プロバイダーとして「ローカル推論」を選択し、必要なモデル（ASR + 翻訳、オプションでTTS）をダウンロードして翻訳を開始 — APIキーもインターネット接続も不要です。
    - 「保存」をクリックして設定を安全に保存
 
 2. **オーディオデバイスを設定**:
    
    <p align="center">
-     <img width="600" src="https://github.com/kizuna-ai-lab/Eburon/raw/main/screenshots/audio-settings.png" alt="Audio Settings" />
+     <img width="600" src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/screenshots/audio-settings.png" alt="Audio Settings" />
    </p>
    
    - オーディオボタンをクリックしてオーディオパネルを開く
@@ -268,7 +268,7 @@ Eburonのオーディオフロー：
 - **フロントエンド**: React 18 + TypeScript
 - **バックエンド**: Cloudflare Workers + Hono + D1 Database
 - **認証**: Better Auth
-- **AIプロバイダー**: OpenAI、Google Gemini、Palabra.ai、Kizuna AI、Volcengine ST、Doubao AST 2.0、およびOpenAI互換エンドポイント
+- **AIプロバイダー**: OpenAI、Google Gemini、Palabra.ai、Eburon AI、Volcengine ST、Doubao AST 2.0、およびOpenAI互換エンドポイント
 - **高度な音声処理**:
   - リアルタイム音声処理のためのWeb Audio API
   - 信頼性の高い音声キャプチャのためのMediaRecorder API
@@ -317,9 +317,9 @@ Eburonのオーディオフロー：
 
 問題が発生した場合や質問がある場合：
 
-1. [Issues](https://github.com/kizuna-ai-lab/Eburon/issues)で既存の問題を確認
+1. [Issues](https://github.com/eburondeveloperph-gif/eburon-live/issues)で既存の問題を確認
 2. 新しい問題を報告
-3. [Discussions](https://github.com/kizuna-ai-lab/Eburon/discussions)で質問
+3. [Discussions](https://github.com/eburondeveloperph-gif/eburon-live/discussions)で質問
 
 # 謝辞
 

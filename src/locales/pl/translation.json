@@ -133,7 +133,7 @@
     "fetchingApiKey": "Pobieranie klucza API z Twojego konta...",
     "geminiApiKey": "Klucz API Gemini",
     "palabraApiKey": "Klucz API Palabra",
-    "kizunaaiApiKey": "Dostęp Kizuna AI",
+    "eburonaiApiKey": "Dostęp Eburon AI",
     "systemPrompt": "Prompt systemowy",
     "selectModel": "Wybierz model",
     "noModelsAvailable": "Brak dostępnych modeli",
@@ -176,7 +176,7 @@
     "changes": "Co nowego?",
     "apiKeyManagedByBackend": "Klucz API zarządzany przez serwer",
     "autoManaged": "Zarządzane automatycznie",
-    "kizunaApiKeyInfo": "Ten klucz API jest automatycznie zarządzany przez nasz serwis backendowy.",
+    "eburonApiKeyInfo": "Ten klucz API jest automatycznie zarządzany przez nasz serwis backendowy.",
     "webrtcVadDisabledTitle": "Serwerowe VAD niedostępne w trybie WebRTC",
     "webrtcVadNotice": "Serwerowe VAD jest wyłączone w trybie WebRTC. W WebRTC serwer automatycznie obcina dźwięk po wykryciu mowy, co przerywa tłumaczenia.",
     "switchToAdvanced": "Przełącz na tryb zaawansowany",
@@ -324,7 +324,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -441,7 +441,7 @@
     "yourLanguage": "Mój język",
     "userAccount": "Konto Użytkownika",
     "userAccountTooltip": "Użytkownicy techniczni mogą używać własnych kluczy API. Konto Użytkownika jest zaprojektowane dla uproszczonej konfiguracji.",
-    "signInRequired": "Możesz użyć własnego klucza API lub zarejestrować się w usłudze kizuna.ai.",
+    "signInRequired": "Możesz użyć własnego klucza API lub zarejestrować się w usłudze eburon.ai.",
     "signInDescription": "Zarejestruj się dla uproszczonego doświadczenia.",
     "targetLanguage": "Język rozmówcy",
     "microphone": "Mikrofon",
@@ -575,12 +575,12 @@
     "upgradeToPremium": "Uaktualnij do Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Zaloguj się, aby korzystać z usługi Kizuna AI",
+    "signInToUseEburonAI": "Zaloguj się, aby korzystać z usługi Eburon AI",
     "authenticationManaged": "Uwierzytelnianie zarządzane automatycznie",
     "fetchingApiKey": "Pobieranie klucza API...",
     "apiKeyFetched": "Klucz API uzyskany pomyślnie",
     "failedToFetchApiKey": "Nie udało się pobrać klucza API",
-    "kizunaaiNotAvailable": "Kizuna AI jest dostępna tylko po zalogowaniu",
+    "eburonaiNotAvailable": "Eburon AI jest dostępna tylko po zalogowaniu",
     "signIn": "Zaloguj się",
     "signUp": "Zarejestruj się",
     "email": "E-mail",

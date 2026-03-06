@@ -17,7 +17,7 @@
     "autoDetect": "Rilevamento Automatico",
     "signIn": "Accedi",
     "signUp": "Registrati",
-    "signInRequired": "Si prega di accedere per utilizzare Kizuna AI come fornitore"
+    "signInRequired": "Si prega di accedere per utilizzare Eburon AI come fornitore"
   },
   "app": {
     "title": "Eburon",
@@ -154,7 +154,7 @@
     "fetchingApiKey": "Recupero chiave API dal tuo account...",
     "geminiApiKey": "Chiave API Gemini",
     "palabraApiKey": "Chiave API Palabra",
-    "kizunaaiApiKey": "Accesso Kizuna AI",
+    "eburonaiApiKey": "Accesso Eburon AI",
     "systemPrompt": "Prompt di sistema",
     "selectModel": "Seleziona modello",
     "noModelsAvailable": "Nessun modello disponibile",
@@ -197,7 +197,7 @@
     "changes": "Novità",
     "apiKeyManagedByBackend": "Chiave API gestita dal backend",
     "autoManaged": "Gestione automatica",
-    "kizunaApiKeyInfo": "Questa chiave API è gestita automaticamente dal nostro servizio backend.",
+    "eburonApiKeyInfo": "Questa chiave API è gestita automaticamente dal nostro servizio backend.",
     "webrtcVadDisabledTitle": "VAD del server non disponibile in modalità WebRTC",
     "webrtcVadNotice": "Il VAD del server è disabilitato in modalità WebRTC. In WebRTC, il server tronca automaticamente l'audio quando rileva il parlato, interrompendo le traduzioni.",
     "switchToAdvanced": "Passa alla modalità avanzata",
@@ -325,7 +325,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -444,7 +444,7 @@
     "yourLanguage": "La mia lingua",
     "userAccount": "Account Utente",
     "userAccountTooltip": "Per gli utenti con conoscenze tecniche e le proprie chiavi API, potete utilizzare la vostra chiave API sia che siate collegati o meno. L'Account Utente è progettato per i nuovi utenti che preferiscono una configurazione semplificata senza configurazioni complesse.",
-    "signInRequired": "Potete utilizzare il vostro fornitore di AI e la chiave API senza accedere, oppure registrarvi per acquistare e utilizzare il servizio API di kizuna.ai.",
+    "signInRequired": "Potete utilizzare il vostro fornitore di AI e la chiave API senza accedere, oppure registrarvi per acquistare e utilizzare il servizio API di eburon.ai.",
     "signInDescription": "Registratevi per un'esperienza comoda senza configurazioni complesse.",
     "targetLanguage": "Lingua dell'altro",
     "microphone": "Microfono",
@@ -578,12 +578,12 @@
     "upgradeToPremium": "Aggiorna a Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Accedi per utilizzare il servizio Kizuna AI",
+    "signInToUseEburonAI": "Accedi per utilizzare il servizio Eburon AI",
     "authenticationManaged": "Autenticazione gestita automaticamente",
     "fetchingApiKey": "Recupero chiave API...",
     "apiKeyFetched": "Chiave API ottenuta con successo",
     "failedToFetchApiKey": "Impossibile ottenere la chiave API",
-    "kizunaaiNotAvailable": "Kizuna AI è disponibile solo quando sei connesso",
+    "eburonaiNotAvailable": "Eburon AI è disponibile solo quando sei connesso",
     "signIn": "Accedi",
     "signUp": "Registrati",
     "email": "Email",

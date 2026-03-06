@@ -17,7 +17,7 @@
     "autoDetect": "اكتشاف تلقائي",
     "signIn": "تسجيل الدخول",
     "signUp": "تسجيل",
-    "signInRequired": "يرجى تسجيل الدخول لاستخدام Kizuna AI كمزود لك"
+    "signInRequired": "يرجى تسجيل الدخول لاستخدام Eburon AI كمزود لك"
   },
   "app": {
     "title": "Eburon",
@@ -158,7 +158,7 @@
     "fetchingApiKey": "جارٍ جلب مفتاح API من حسابك...",
     "geminiApiKey": "مفتاح API Gemini",
     "palabraApiKey": "مفتاح API Palabra",
-    "kizunaaiApiKey": "وصول Kizuna AI",
+    "eburonaiApiKey": "وصول Eburon AI",
     "systemPrompt": "تعليمات النظام",
     "selectModel": "اختر نموذجًا",
     "noModelsAvailable": "لا توجد نماذج متاحة",
@@ -201,7 +201,7 @@
     "changes": "ما الجديد؟",
     "apiKeyManagedByBackend": "مفتاح API يديره الخادم",
     "autoManaged": "إدارة تلقائية",
-    "kizunaApiKeyInfo": "يتم إدارة مفتاح API هذا تلقائيًا بواسطة خدمتنا الخلفية.",
+    "eburonApiKeyInfo": "يتم إدارة مفتاح API هذا تلقائيًا بواسطة خدمتنا الخلفية.",
     "webrtcVadDisabledTitle": "VAD الخادم غير متاح في وضع WebRTC",
     "webrtcVadNotice": "VAD الخادم معطّل في وضع WebRTC. في WebRTC، يقطع الخادم الصوت تلقائيًا عند اكتشاف الكلام، مما يقطع الترجمات.",
     "unlimited": "غير محدود",
@@ -248,7 +248,7 @@
     "yourLanguage": "لغتي",
     "userAccount": "حساب المستخدم",
     "userAccountTooltip": "للمستخدمين الذين لديهم معرفة تقنية ومفاتيح API الخاصة بهم، يمكنكم استخدام مفتاح API الخاص بكم سواء كنتم مسجلين الدخول أم لا. حساب المستخدم مصمم للمستخدمين الجدد الذين يفضلون إعداداً مبسطاً بدون تكوين معقد.",
-    "signInRequired": "يمكنكم استخدام مزود الذكاء الاصطناعي ومفتاح API الخاصين بكم بدون تسجيل الدخول، أو التسجيل لشراء واستخدام خدمة API من kizuna.ai.",
+    "signInRequired": "يمكنكم استخدام مزود الذكاء الاصطناعي ومفتاح API الخاصين بكم بدون تسجيل الدخول، أو التسجيل لشراء واستخدام خدمة API من eburon.ai.",
     "signInDescription": "سجلوا للحصول على تجربة مريحة بدون تكوين معقد.",
     "targetLanguage": "لغة الآخر",
     "microphone": "ميكروفون",
@@ -463,7 +463,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -606,12 +606,12 @@
     "signUpError": "فشل إنشاء الحساب. يرجى المحاولة مرة أخرى",
     "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك",
     "unknownError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى",
-    "signInToUseKizunaAI": "يرجى تسجيل الدخول لاستخدام خدمة Kizuna AI",
+    "signInToUseEburonAI": "يرجى تسجيل الدخول لاستخدام خدمة Eburon AI",
     "authenticationManaged": "تتم إدارة المصادقة تلقائيًا",
     "fetchingApiKey": "جارٍ جلب مفتاح API...",
     "apiKeyFetched": "تم الحصول على مفتاح API بنجاح",
     "failedToFetchApiKey": "فشل في الحصول على مفتاح API",
-    "kizunaaiNotAvailable": "Kizuna AI متاح فقط عند تسجيل الدخول",
+    "eburonaiNotAvailable": "Eburon AI متاح فقط عند تسجيل الدخول",
     "emailVerified": "تم التحقق من البريد الإلكتروني",
     "emailNotVerified": "لم يتم التحقق من البريد الإلكتروني. انقر لإعادة إرسال رسالة التحقق",
     "verify": "تحقق",

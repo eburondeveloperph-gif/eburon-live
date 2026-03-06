@@ -66,7 +66,7 @@ Install directly from the [Chrome Web Store](https://chromewebstore.google.com/d
 
 ### Developer Mode Installation
 
-1. Download the latest `Eburon-extension.zip` from the [releases page](https://github.com/kizuna-ai-lab/Eburon/releases)
+1. Download the latest `Eburon-extension.zip` from the [releases page](https://github.com/eburondeveloperph-gif/eburon-live/releases)
 2. Extract the zip file to a folder
 3. Open Chrome and go to `chrome://extensions/`
 4. Enable "Developer mode" in the top right corner
@@ -145,7 +145,7 @@ extension/
 
 For issues, feature requests, or questions:
 
-- [GitHub Issues](https://github.com/kizuna-ai-lab/Eburon/issues)
+- [GitHub Issues](https://github.com/eburondeveloperph-gif/eburon-live/issues)
 - [Chrome Web Store Reviews](https://chromewebstore.google.com/detail/ppmihnhelgfpjomhjhpecobloelicnak)
 
 ## License

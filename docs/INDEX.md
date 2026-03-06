@@ -69,7 +69,7 @@ npm run electron:build
 │         ┌──────────▼───────────┐           │
 │         │   AI Providers       │           │
 │         │  OpenAI | Gemini     │           │
-│         │  Palabra | Kizuna AI │           │
+│         │  Palabra | Eburon AI │           │
 │         │  OpenAI Compatible   │           │
 │         └──────────────────────┘           │
 └─────────────────────────────────────────────┘
@@ -81,7 +81,7 @@ npm run electron:build
 - **Authentication**: Better Auth (migrated from Clerk)
 - **Desktop**: Electron 34+
 - **Extension**: Chrome Manifest V3
-- **AI Providers**: OpenAI, Google Gemini, Palabra.ai, Kizuna AI, and OpenAI-compatible endpoints
+- **AI Providers**: OpenAI, Google Gemini, Palabra.ai, Eburon AI, and OpenAI-compatible endpoints
 
 ### Core Components
 - **Service Factory Pattern**: Platform-specific implementations (Electron/Browser)
@@ -118,11 +118,11 @@ npm run electron:build
 ### 3. **Feature Documentation**
 - **Authentication & Authorization**
   - [Authentication Integration](./TODO-AUTH-INTEGRATION.md)
-  - [Kizuna AI Integration](./KIZUNA_AI_INTEGRATION.md)
+  - [Eburon AI Integration](./EBURON_AI_INTEGRATION.md)
   - [Profile Optimization](./PROFILE-OPTIMIZATION.md)
 
 - **AI Provider Integration**
-  - [Kizuna AI Provider](./KIZUNA_AI_INTEGRATION.md)
+  - [Eburon AI Provider](./EBURON_AI_INTEGRATION.md)
   - [Provider System Overview](../CLAUDE.md#ai-provider-architecture)
 
 - **Analytics & Tracking**
@@ -277,9 +277,9 @@ cd backend-cf && npm run deploy
 - [Chrome Extension Docs](https://developer.chrome.com/docs/extensions/)
 
 ### Project Resources
-- **Repository**: [GitHub](https://github.com/kizunaai/Eburon-react)
-- **Issues**: [GitHub Issues](https://github.com/kizunaai/Eburon-react/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/kizunaai/Eburon-react/discussions)
+- **Repository**: [GitHub](https://github.com/eburonai/Eburon-react)
+- **Issues**: [GitHub Issues](https://github.com/eburonai/Eburon-react/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/eburonai/Eburon-react/discussions)
 
 ---
 
@@ -301,4 +301,4 @@ cd backend-cf && npm run deploy
 ---
 
 *Last Updated: 2025-01-03*
-*Maintained by: Kizuna AI Lab*
+*Maintained by: Eburon AI*

@@ -12,7 +12,7 @@ You need to configure the following secrets in your GitHub repository:
 
 ### 1. `VITE_BACKEND_URL_PROD` (Optional)
 - **Description**: Production backend API URL
-- **Default**: `https://Eburon-api.kizuna.ai`
+- **Default**: `https://api.eburon.ai`
 - **Note**: Only set this if using a different production API endpoint
 
 ### 2. `VITE_EXTENSION_ID_PROD` (Optional)

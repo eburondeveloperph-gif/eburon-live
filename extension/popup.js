@@ -326,7 +326,7 @@ function showUnsupportedState(hostname) {
     </div>
 
     <div class="instructions">
-      <p><strong>${getMessage('needMoreSites')}</strong> ${getMessage('contactUs')} <a href="mailto:support@kizuna.ai" target="_blank">support@kizuna.ai</a> ${getMessage('contributeCode')} <a href="https://github.com/kizuna-ai-lab/Eburon" target="_blank">${getMessage('openSourceProject')}</a>.</p>
+      <p><strong>${getMessage('needMoreSites')}</strong> ${getMessage('contactUs')} <a href="mailto:support@eburon.ai" target="_blank">support@eburon.ai</a> ${getMessage('contributeCode')} <a href="https://github.com/eburondeveloperph-gif/eburon-live" target="_blank">${getMessage('openSourceProject')}</a>.</p>
     </div>
   `;
 }
@@ -353,7 +353,7 @@ function showErrorState() {
     </div>
 
     <div class="instructions">
-      <p><strong>${getMessage('needMoreSitesShort')}</strong> <a href="mailto:support@kizuna.ai" target="_blank">${getMessage('contactUsShort')}</a> ${getMessage('contributeCode')} <a href="https://github.com/kizuna-ai-lab/Eburon" target="_blank">${getMessage('contributeCodeShort')}</a>.</p>
+      <p><strong>${getMessage('needMoreSitesShort')}</strong> <a href="mailto:support@eburon.ai" target="_blank">${getMessage('contactUsShort')}</a> ${getMessage('contributeCode')} <a href="https://github.com/eburondeveloperph-gif/eburon-live" target="_blank">${getMessage('contributeCodeShort')}</a>.</p>
     </div>
   `;
 }

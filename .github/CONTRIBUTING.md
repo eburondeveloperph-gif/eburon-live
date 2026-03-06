@@ -92,8 +92,8 @@ We welcome code contributions! Please:
 ## 📞 Getting Help
 
 - **Technical Questions**: Use our issue templates
-- **General Discussions**: Use [GitHub Discussions](https://github.com/kizuna-ai-lab/Eburon/discussions)
-- **Documentation**: Check our [README](https://github.com/kizuna-ai-lab/Eburon/blob/main/README.md)
+- **General Discussions**: Use [GitHub Discussions](https://github.com/eburondeveloperph-gif/eburon-live/discussions)
+- **Documentation**: Check our [README](https://github.com/eburondeveloperph-gif/eburon-live/blob/main/README.md)
 
 ## ⚖️ Code of Conduct
 

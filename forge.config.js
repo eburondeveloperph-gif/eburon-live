@@ -6,7 +6,7 @@ module.exports = {
     asar: true,
     extraResource: ['assets', 'resources'],
     icon: process.platform === 'win32' ? 'assets/icon.ico' : 'assets/icon',
-    appId: 'com.kizunaai.Eburon',
+    appId: 'com.eburonai.Eburon',
     executableName: 'Eburon',
     name: 'Eburon',
     // Ignore development files and directories
@@ -69,11 +69,11 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         name: 'Eburon',
-        authors: 'Kizuna AI Lab',
+        authors: 'Eburon AI',
         exe: 'Eburon.exe',
         description: 'Live speech translation application using OpenAI and Google Gemini APIs',
         setupIcon: 'assets/icon.ico',
-        iconUrl: 'https://raw.githubusercontent.com/kizuna-ai-lab/Eburon/main/assets/icon.ico',
+        iconUrl: 'https://raw.githubusercontent.com/eburondeveloperph-gif/eburon-live/main/assets/icon.ico',
         noMsi: true
       }
     },

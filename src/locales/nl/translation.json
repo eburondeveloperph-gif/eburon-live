@@ -17,7 +17,7 @@
     "autoDetect": "Automatische Detectie",
     "signIn": "Inloggen",
     "signUp": "Aanmelden",
-    "signInRequired": "Log in om Kizuna AI als uw provider te gebruiken"
+    "signInRequired": "Log in om Eburon AI als uw provider te gebruiken"
   },
   "app": {
     "title": "Eburon",
@@ -135,7 +135,7 @@
     "fetchingApiKey": "API-sleutel ophalen van uw account...",
     "geminiApiKey": "Gemini API-sleutel",
     "palabraApiKey": "Palabra API-sleutel",
-    "kizunaaiApiKey": "Kizuna AI Toegang",
+    "eburonaiApiKey": "Eburon AI Toegang",
     "systemPrompt": "Systeemprompt",
     "selectModel": "Model selecteren",
     "noModelsAvailable": "Geen modellen beschikbaar",
@@ -178,7 +178,7 @@
     "changes": "Wat is nieuw?",
     "apiKeyManagedByBackend": "Door backend beheerde API-sleutel",
     "autoManaged": "Automatisch beheerd",
-    "kizunaApiKeyInfo": "Deze API-sleutel wordt automatisch beheerd door onze backend-service.",
+    "eburonApiKeyInfo": "Deze API-sleutel wordt automatisch beheerd door onze backend-service.",
     "webrtcVadDisabledTitle": "Server-VAD is niet beschikbaar in WebRTC-modus",
     "webrtcVadNotice": "Server-VAD is uitgeschakeld in WebRTC-modus. In WebRTC kapt de server automatisch audio af bij spraakdetectie, wat vertalingen onderbreekt.",
     "switchToAdvanced": "Schakel naar geavanceerde modus",
@@ -325,7 +325,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -442,7 +442,7 @@
     "yourLanguage": "Mijn taal",
     "userAccount": "Gebruikersaccount",
     "userAccountTooltip": "Technische gebruikers kunnen hun eigen API-sleutels gebruiken. Gebruikersaccount is ontworpen voor vereenvoudigde setup.",
-    "signInRequired": "U kunt uw eigen API-sleutel gebruiken of zich registreren voor de kizuna.ai-service.",
+    "signInRequired": "U kunt uw eigen API-sleutel gebruiken of zich registreren voor de eburon.ai-service.",
     "signInDescription": "Registreer voor een vereenvoudigde ervaring.",
     "targetLanguage": "Taal van de ander",
     "microphone": "Microfoon",
@@ -576,12 +576,12 @@
     "upgradeToPremium": "Upgrade naar Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Log in om de Kizuna AI-service te gebruiken",
+    "signInToUseEburonAI": "Log in om de Eburon AI-service te gebruiken",
     "authenticationManaged": "Authenticatie wordt automatisch beheerd",
     "fetchingApiKey": "API-sleutel ophalen...",
     "apiKeyFetched": "API-sleutel succesvol verkregen",
     "failedToFetchApiKey": "Kon API-sleutel niet ophalen",
-    "kizunaaiNotAvailable": "Kizuna AI is alleen beschikbaar wanneer je bent ingelogd",
+    "eburonaiNotAvailable": "Eburon AI is alleen beschikbaar wanneer je bent ingelogd",
     "signIn": "Inloggen",
     "signUp": "Registreren",
     "email": "E-mail",

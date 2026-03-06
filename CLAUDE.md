@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Eburon is a real-time AI-powered translation application available as both an Electron desktop app and a browser extension. It provides live speech translation using OpenAI, Google Gemini, Palabra.ai, and Kizuna AI APIs with modern audio processing capabilities. It also supports OpenAI-compatible API endpoints for flexibility.
+Eburon is a real-time AI-powered translation application available as both an Electron desktop app and a browser extension. It provides live speech translation using OpenAI, Google Gemini, Palabra.ai, and Eburon AI APIs with modern audio processing capabilities. It also supports OpenAI-compatible API endpoints for flexibility.
 
 ## Development Commands
 
@@ -66,11 +66,11 @@ The codebase supports both Electron desktop app and Chrome/Edge browser extensio
 
 2. **AI Client Architecture**
    - `ClientFactory` creates provider-specific clients
-   - Providers: OpenAI, Gemini, PalabraAI, KizunaAI, OpenAI Compatible
+   - Providers: OpenAI, Gemini, PalabraAI, EburonAI, OpenAI Compatible
    - Each client implements `IClient` interface
    - Real-time communication via WebSocket or REST APIs
    - OpenAI Compatible provider allows custom API endpoints (Electron only)
-   - KizunaAI uses OpenAI-compatible API with backend-managed authentication
+   - EburonAI uses OpenAI-compatible API with backend-managed authentication
 
 3. **Audio Processing Pipeline**
    ```
@@ -126,7 +126,7 @@ if (isElectron()) {
 
 // Get backend URL (respects VITE_BACKEND_URL env var)
 import { getBackendUrl, getApiUrl } from '../utils/environment';
-const apiUrl = getApiUrl(); // https://Eburon.kizuna.ai/api
+const apiUrl = getApiUrl(); // https://app.eburon.ai/api
 ```
 
 ### Zustand Store Patterns
@@ -175,8 +175,8 @@ useSettingsStore.subscribe(
 - Source maps enabled for debugging
 
 ### Environment Variables
-- `VITE_BACKEND_URL`: Backend API URL (default: `https://Eburon.kizuna.ai`)
-- `VITE_ENABLE_KIZUNA_AI`: Enable Kizuna AI provider in production (`true`/`false`)
+- `VITE_BACKEND_URL`: Backend API URL (default: `https://app.eburon.ai`)
+- `VITE_ENABLE_EBURON_AI`: Enable Eburon AI provider in production (`true`/`false`)
 - Environment detection via `src/utils/environment.ts`
 
 ### TypeScript Configuration
@@ -286,22 +286,22 @@ useSettingsStore.subscribe(
 
 ### Security Policy
 - Strict CSP configuration for extension pages
-- Allowed connections to AI provider APIs (OpenAI, Google, Palabra, Kizuna AI, and OpenAI-compatible endpoints)
+- Allowed connections to AI provider APIs (OpenAI, Google, Palabra, Eburon AI, and OpenAI-compatible endpoints)
 - PostHog analytics integration for usage tracking
 
 ## Authentication and API Key Management
 
 ### Authentication System
 - **Better Auth Integration**: User authentication using Better Auth service
-- **Backend-Managed Keys**: Kizuna AI API keys are automatically managed by the backend
+- **Backend-Managed Keys**: Eburon AI API keys are automatically managed by the backend
 - **Mixed Authentication**: Supports both user-managed and backend-managed API keys
 - **Cross-Platform**: Authentication works across Electron and browser extension
 
 ### API Key Types
 1. **User-Managed Keys**: OpenAI, Gemini, Palabra AI, OpenAI Compatible - users input their own keys
-2. **Backend-Managed Keys**: Kizuna AI - keys fetched from authenticated backend service
+2. **Backend-Managed Keys**: Eburon AI - keys fetched from authenticated backend service
 
-### Authentication Flow for Kizuna AI
+### Authentication Flow for Eburon AI
 1. User signs in via Better Auth authentication
 2. `ApiKeyService` fetches API key from backend endpoint (`/api/user/api-key`)
 3. API key is cached for 5 minutes to reduce backend load

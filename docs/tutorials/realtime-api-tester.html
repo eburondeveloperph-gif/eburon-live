@@ -419,7 +419,7 @@
         </div>
 
         <div class="header">
-            <img src="https://github.com/kizuna-ai-lab/Eburon/raw/main/src/assets/logo.png" alt="Eburon Logo">
+            <img src="https://github.com/eburondeveloperph-gif/eburon-live/raw/main/src/assets/logo.png" alt="Eburon Logo">
             <h1 id="page-title">Realtime API Tester</h1>
         </div>
 
@@ -436,7 +436,7 @@
         </div>
 
         <footer id="footer">
-            &copy; 2025 Kizuna AI Lab. All rights reserved.
+            &copy; 2025 Eburon AI. All rights reserved.
         </footer>
     </div>
 
@@ -528,12 +528,12 @@
                 supportedServicesList: [
                     "OpenAI Realtime API (official)",
                     "CometAPI (OpenAI-compatible)",
-                    "Kizuna AI API (OpenAI-compatible)",
+                    "Eburon AI API (OpenAI-compatible)",
                     "Any OpenAI-compatible realtime service"
                 ],
                 securityNote: "Security Note",
                 securityNoteDescription: "This tester uses the 'openai-insecure-api-key' WebSocket protocol for browser-based testing, which exposes your API key. This is ONLY suitable for testing and development. For production applications, always use a secure relay server to protect your API credentials.",
-                footer: "&copy; 2025 Kizuna AI Lab. All rights reserved."
+                footer: "&copy; 2025 Eburon AI. All rights reserved."
             },
             zh: {
                 pageTitle: "实时 API 测试器",
@@ -620,12 +620,12 @@
                 supportedServicesList: [
                     "OpenAI 实时 API（官方）",
                     "CometAPI（OpenAI 兼容）",
-                    "Kizuna AI API（OpenAI 兼容）",
+                    "Eburon AI API（OpenAI 兼容）",
                     "任何 OpenAI 兼容的实时服务"
                 ],
                 securityNote: "安全提示",
                 securityNoteDescription: "此测试器使用 'openai-insecure-api-key' WebSocket 协议进行基于浏览器的测试，这会暴露您的 API 密钥。这仅适用于测试和开发。在生产应用中，请始终使用安全的中继服务器来保护您的 API 凭据。",
-                footer: "&copy; 2025 Kizuna AI Lab. 保留所有权利。"
+                footer: "&copy; 2025 Eburon AI. 保留所有权利。"
             },
             ja: {
                 pageTitle: "リアルタイム API テスター",
@@ -712,12 +712,12 @@
                 supportedServicesList: [
                     "OpenAI リアルタイム API（公式）",
                     "CometAPI（OpenAI 互換）",
-                    "Kizuna AI API（OpenAI 互換）",
+                    "Eburon AI API（OpenAI 互換）",
                     "OpenAI 互換のリアルタイムサービス"
                 ],
                 securityNote: "セキュリティ通知",
                 securityNoteDescription: "このテスターはブラウザベースのテスト用に 'openai-insecure-api-key' WebSocket プロトコルを使用し、API キーを公開します。これはテストと開発のみに適しています。本番アプリケーションでは、必ず安全なリレーサーバーを使用して API 認証情報を保護してください。",
-                footer: "&copy; 2025 Kizuna AI Lab. All rights reserved."
+                footer: "&copy; 2025 Eburon AI. All rights reserved."
             },
             ko: {
                 pageTitle: "실시간 API 테스터",
@@ -804,12 +804,12 @@
                 supportedServicesList: [
                     "OpenAI 실시간 API (공식)",
                     "CometAPI (OpenAI 호환)",
-                    "Kizuna AI API (OpenAI 호환)",
+                    "Eburon AI API (OpenAI 호환)",
                     "OpenAI 호환 실시간 서비스"
                 ],
                 securityNote: "보안 공지",
                 securityNoteDescription: "이 테스터는 브라우저 기반 테스트를 위해 'openai-insecure-api-key' WebSocket 프로토콜을 사용하여 API 키를 노출합니다. 이는 테스트 및 개발에만 적합합니다. 프로덕션 애플리케이션에서는 항상 보안 릴레이 서버를 사용하여 API 자격 증명을 보호하세요.",
-                footer: "&copy; 2025 Kizuna AI Lab. 모든 권리 보유."
+                footer: "&copy; 2025 Eburon AI. 모든 권리 보유."
             }
         };
 
@@ -853,7 +853,7 @@
                             <div class="preset-buttons">
                                 <button class="preset-btn" onclick="setPreset('openai')">OpenAI</button>
                                 <button class="preset-btn" onclick="setPreset('cometapi')">CometAPI</button>
-                                <button class="preset-btn" onclick="setPreset('kizunaai')">Kizuna AI</button>
+                                <button class="preset-btn" onclick="setPreset('eburonai')">Eburon AI</button>
                                 <button class="preset-btn" onclick="setPreset('custom')">Custom</button>
                             </div>
                         </div>
@@ -1007,8 +1007,8 @@
                     endpointInput.value = 'https://api.cometapi.com';
                     modelSelect.value = 'gpt-4o-realtime-preview';
                     break;
-                case 'kizunaai':
-                    endpointInput.value = 'https://api.kizuna.ai';
+                case 'eburonai':
+                    endpointInput.value = 'https://api.eburon.ai';
                     modelSelect.value = 'gpt-4o-realtime-preview';
                     break;
                 case 'custom':

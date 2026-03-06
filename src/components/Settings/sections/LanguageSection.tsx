@@ -8,13 +8,13 @@ import {
   useGeminiSettings,
   useOpenAICompatibleSettings,
   usePalabraAISettings,
-  useKizunaAISettings,
+  useEburonAISettings,
   useSetUILanguage,
   useUpdateOpenAI,
   useUpdateGemini,
   useUpdateOpenAICompatible,
   useUpdatePalabraAI,
-  useUpdateKizunaAI
+  useUpdateEburonAI
 } from '../../../stores/settingsStore';
 import { Provider } from '../../../types/Provider';
 import { ProviderConfigFactory } from '../../../services/providers/ProviderConfigFactory';
@@ -50,14 +50,14 @@ const LanguageSection: React.FC<LanguageSectionProps> = ({
   const geminiSettings = useGeminiSettings();
   const openAICompatibleSettings = useOpenAICompatibleSettings();
   const palabraAISettings = usePalabraAISettings();
-  const kizunaAISettings = useKizunaAISettings();
+  const eburonAISettings = useEburonAISettings();
 
   const setUILanguage = useSetUILanguage();
   const updateOpenAISettings = useUpdateOpenAI();
   const updateGeminiSettings = useUpdateGemini();
   const updateOpenAICompatibleSettings = useUpdateOpenAICompatible();
   const updatePalabraAISettings = useUpdatePalabraAI();
-  const updateKizunaAISettings = useUpdateKizunaAI();
+  const updateEburonAISettings = useUpdateEburonAI();
 
   // Get provider configuration with fallback
   const providerConfig: ProviderConfig = useMemo(() => {
@@ -79,12 +79,12 @@ const LanguageSection: React.FC<LanguageSectionProps> = ({
         return openAICompatibleSettings;
       case Provider.PALABRA_AI:
         return palabraAISettings;
-      case Provider.KIZUNA_AI:
-        return kizunaAISettings;
+      case Provider.EBURON_AI:
+        return eburonAISettings;
       default:
         return openAISettings;
     }
-  }, [provider, openAISettings, geminiSettings, openAICompatibleSettings, palabraAISettings, kizunaAISettings]);
+  }, [provider, openAISettings, geminiSettings, openAICompatibleSettings, palabraAISettings, eburonAISettings]);
 
   // Update source language
   const updateSourceLanguage = (value: string) => {
@@ -101,8 +101,8 @@ const LanguageSection: React.FC<LanguageSectionProps> = ({
       case Provider.PALABRA_AI:
         updatePalabraAISettings({ sourceLanguage: value });
         break;
-      case Provider.KIZUNA_AI:
-        updateKizunaAISettings({ sourceLanguage: value });
+      case Provider.EBURON_AI:
+        updateEburonAISettings({ sourceLanguage: value });
         break;
     }
     trackEvent('language_changed', {
@@ -126,8 +126,8 @@ const LanguageSection: React.FC<LanguageSectionProps> = ({
       case Provider.PALABRA_AI:
         updatePalabraAISettings({ targetLanguage: value });
         break;
-      case Provider.KIZUNA_AI:
-        updateKizunaAISettings({ targetLanguage: value });
+      case Provider.EBURON_AI:
+        updateEburonAISettings({ targetLanguage: value });
         break;
     }
     trackEvent('language_changed', {

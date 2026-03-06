@@ -49,9 +49,9 @@ export function createClient(
       }
       return new NodeOpenAIClient(apiKey, apiHost);
 
-    case 'kizuna_ai':
-      // Kizuna AI uses OpenAI-compatible API
-      return new NodeOpenAIClient(apiKey, apiHost || 'wss://Eburon.kizuna.ai');
+    case 'eburon_ai':
+      // Eburon AI uses OpenAI-compatible API
+      return new NodeOpenAIClient(apiKey, apiHost || 'wss://app.eburon.ai');
 
     case 'gemini':
       throw new Error('Gemini provider not yet implemented in test runner');
@@ -68,12 +68,12 @@ export function createClient(
  * Check if a provider is supported
  */
 export function isProviderSupported(provider: TestProvider): boolean {
-  return ['openai', 'openai_compatible', 'kizuna_ai'].includes(provider);
+  return ['openai', 'openai_compatible', 'eburon_ai'].includes(provider);
 }
 
 /**
  * Get list of supported providers
  */
 export function getSupportedProviders(): TestProvider[] {
-  return ['openai', 'openai_compatible', 'kizuna_ai'];
+  return ['openai', 'openai_compatible', 'eburon_ai'];
 }

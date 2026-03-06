@@ -310,6 +310,12 @@ export class GeminiProviderConfig {
   private static readonly MODELS: ModelOption[] = [
     { id: 'gemini-2.0-flash-live-001', type: 'realtime' },
     { id: 'gemini-2.5-flash-preview-native-audio-dialog', type: 'realtime' },
+    { id: 'gemini-2.0-flash-exp', type: 'realtime' },
+    { id: 'gemini-2.5-flash', type: 'multimodal' },
+    { id: 'gemini-2.5-pro', type: 'multimodal' },
+    { id: 'gemini-2.0-flash', type: 'multimodal' },
+    { id: 'gemini-1.5-flash', type: 'multimodal' },
+    { id: 'gemini-1.5-pro', type: 'multimodal' },
   ];
 
   getConfig(): ProviderConfig {

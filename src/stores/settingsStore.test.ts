@@ -33,7 +33,7 @@ describe('settingsStore', () => {
   });
 
   describe('Provider Switching', () => {
-    it('should trigger auto-validation when switching to non-KizunaAI provider', async () => {
+    it('should trigger auto-validation when switching to non-EburonAI provider', async () => {
       vi.useFakeTimers();
       const store = useSettingsStore.getState();
       
@@ -61,7 +61,7 @@ describe('settingsStore', () => {
       expect(useSettingsStore.getState().provider).toBe(Provider.GEMINI);
     });
 
-    it('should NOT trigger auto-validation when switching to KizunaAI provider', async () => {
+    it('should NOT trigger auto-validation when switching to EburonAI provider', async () => {
       vi.useFakeTimers();
       const store = useSettingsStore.getState();
       
@@ -76,8 +76,8 @@ describe('settingsStore', () => {
         });
       });
 
-      // Switch to KizunaAI
-      await store.setProvider(Provider.KIZUNA_AI);
+      // Switch to EburonAI
+      await store.setProvider(Provider.EBURON_AI);
       
       // Fast-forward timer
       vi.advanceTimersByTime(100);
@@ -86,7 +86,7 @@ describe('settingsStore', () => {
       expect(validateSpy).not.toHaveBeenCalled();
       
       // Check that provider was updated
-      expect(useSettingsStore.getState().provider).toBe(Provider.KIZUNA_AI);
+      expect(useSettingsStore.getState().provider).toBe(Provider.EBURON_AI);
     });
 
     it('should clear cache when switching providers', async () => {

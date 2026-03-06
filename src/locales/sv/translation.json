@@ -92,7 +92,7 @@
     "fetchingApiKey": "Hämtar API-nyckel från ditt konto...",
     "geminiApiKey": "Gemini API-nyckel",
     "palabraApiKey": "Palabra API-nyckel",
-    "kizunaaiApiKey": "Kizuna AI Åtkomst",
+    "eburonaiApiKey": "Eburon AI Åtkomst",
     "systemPrompt": "Systemprompt",
     "selectModel": "Välj modell",
     "noModelsAvailable": "Inga modeller tillgängliga",
@@ -135,7 +135,7 @@
     "changes": "Nyheter",
     "apiKeyManagedByBackend": "API-nyckel hanterad av servern",
     "autoManaged": "Automatiskt hanterad",
-    "kizunaApiKeyInfo": "Denna API-nyckel hanteras automatiskt av vår backend-tjänst.",
+    "eburonApiKeyInfo": "Denna API-nyckel hanteras automatiskt av vår backend-tjänst.",
     "webrtcVadDisabledTitle": "Server-VAD är inte tillgänglig i WebRTC-läge",
     "webrtcVadNotice": "Server-VAD är inaktiverat i WebRTC-läge. I WebRTC klipper servern automatiskt av ljud vid taligenkänning, vilket avbryter översättningar.",
     "switchToAdvanced": "Byt till avancerat läge",
@@ -276,7 +276,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -398,7 +398,7 @@
     "yourLanguage": "Mitt språk",
     "userAccount": "Användarkonto",
     "userAccountTooltip": "Tekniska användare kan använda sina egna API-nycklar. Användarkonto designat för förenklad installation.",
-    "signInRequired": "Använd din egen API-nyckel eller registrera dig för kizuna.ai-tjänsten.",
+    "signInRequired": "Använd din egen API-nyckel eller registrera dig för eburon.ai-tjänsten.",
     "signInDescription": "Registrera dig för förenklad upplevelse.",
     "targetLanguage": "Den andras språk",
     "microphone": "Mikrofon",
@@ -532,12 +532,12 @@
     "upgradeToPremium": "Uppgradera till Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Logga in för att använda Kizuna AI-tjänsten",
+    "signInToUseEburonAI": "Logga in för att använda Eburon AI-tjänsten",
     "authenticationManaged": "Autentisering hanteras automatiskt",
     "fetchingApiKey": "Hämtar API-nyckel...",
     "apiKeyFetched": "API-nyckel hämtad",
     "failedToFetchApiKey": "Kunde inte hämta API-nyckel",
-    "kizunaaiNotAvailable": "Kizuna AI är endast tillgänglig när du är inloggad",
+    "eburonaiNotAvailable": "Eburon AI är endast tillgänglig när du är inloggad",
     "signIn": "Logga in",
     "signUp": "Registrera",
     "email": "E-post",

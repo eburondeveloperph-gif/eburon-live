@@ -114,7 +114,7 @@
     "fetchingApiKey": "Haetaan API-avainta tililtäsi...",
     "geminiApiKey": "Gemini API-avain",
     "palabraApiKey": "Palabra API-avain",
-    "kizunaaiApiKey": "Kizuna AI Pääsy",
+    "eburonaiApiKey": "Eburon AI Pääsy",
     "systemPrompt": "Järjestelmäkehote",
     "selectModel": "Valitse malli",
     "noModelsAvailable": "Ei malleja saatavilla",
@@ -157,7 +157,7 @@
     "changes": "Uutta",
     "apiKeyManagedByBackend": "Palvelimen hallinnoima API-avain",
     "autoManaged": "Automaattisesti hallittu",
-    "kizunaApiKeyInfo": "Tätä API-avainta hallinnoi automaattisesti backend-palvelumme.",
+    "eburonApiKeyInfo": "Tätä API-avainta hallinnoi automaattisesti backend-palvelumme.",
     "webrtcVadDisabledTitle": "Palvelimen VAD ei ole käytettävissä WebRTC-tilassa",
     "webrtcVadNotice": "Palvelimen VAD on pois käytöstä WebRTC-tilassa. WebRTC:ssä palvelin katkaisee automaattisesti äänen tunnistaessaan puhetta, mikä keskeyttää käännökset.",
     "switchToAdvanced": "Vaihda edistyneeseen tilaan",
@@ -247,7 +247,7 @@
     "yourLanguage": "Minun kieleni",
     "userAccount": "Käyttäjätili",
     "userAccountTooltip": "Tekniset käyttäjät voivat käyttää omia API-avaimiaan. Käyttäjätili on suunniteltu yksinkertaistettuun asennukseen.",
-    "signInRequired": "Voit käyttää omaa API-avaintasi tai rekisteröityä kizuna.ai-palveluun.",
+    "signInRequired": "Voit käyttää omaa API-avaintasi tai rekisteröityä eburon.ai-palveluun.",
     "signInDescription": "Rekisteröidy yksinkertaistettua kokemusta varten.",
     "targetLanguage": "Toisen kieli",
     "microphone": "Mikrofoni",
@@ -427,7 +427,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -534,12 +534,12 @@
     "upgradeToPremium": "Päivitä Premiumiin"
   },
   "auth": {
-    "signInToUseKizunaAI": "Kirjaudu sisään käyttääksesi Kizuna AI -palvelua",
+    "signInToUseEburonAI": "Kirjaudu sisään käyttääksesi Eburon AI -palvelua",
     "authenticationManaged": "Todennus hallitaan automaattisesti",
     "fetchingApiKey": "Haetaan API-avainta...",
     "apiKeyFetched": "API-avain haettu onnistuneesti",
     "failedToFetchApiKey": "API-avaimen haku epäonnistui",
-    "kizunaaiNotAvailable": "Kizuna AI on käytettävissä vain kirjautuneena",
+    "eburonaiNotAvailable": "Eburon AI on käytettävissä vain kirjautuneena",
     "signIn": "Kirjaudu sisään",
     "signUp": "Rekisteröidy",
     "email": "Sähköposti",

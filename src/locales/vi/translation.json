@@ -116,7 +116,7 @@
     "fetchingApiKey": "Đang lấy API key từ tài khoản của bạn...",
     "geminiApiKey": "API key Gemini",
     "palabraApiKey": "API key Palabra",
-    "kizunaaiApiKey": "Truy cập Kizuna AI",
+    "eburonaiApiKey": "Truy cập Eburon AI",
     "systemPrompt": "Prompt hệ thống",
     "selectModel": "Chọn mô hình",
     "noModelsAvailable": "Không có mô hình nào",
@@ -159,7 +159,7 @@
     "changes": "Có gì mới?",
     "apiKeyManagedByBackend": "API key do backend quản lý",
     "autoManaged": "Tự động quản lý",
-    "kizunaApiKeyInfo": "API key này được quản lý tự động bởi dịch vụ backend của chúng tôi.",
+    "eburonApiKeyInfo": "API key này được quản lý tự động bởi dịch vụ backend của chúng tôi.",
     "webrtcVadDisabledTitle": "VAD máy chủ không khả dụng trong chế độ WebRTC",
     "webrtcVadNotice": "VAD máy chủ bị tắt trong chế độ WebRTC. Trong WebRTC, máy chủ tự động cắt âm thanh khi phát hiện giọng nói, điều này làm gián đoạn bản dịch.",
     "switchToAdvanced": "Chuyển sang chế độ nâng cao",
@@ -276,7 +276,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -393,7 +393,7 @@
     "yourLanguage": "Ngôn ngữ của tôi",
     "userAccount": "Tài khoản người dùng",
     "userAccountTooltip": "Người dùng kỹ thuật có thể sử dụng khóa API riêng của họ. Tài khoản người dùng được thiết kế cho cài đặt đơn giản.",
-    "signInRequired": "Sử dụng khóa API riêng của bạn hoặc đăng ký dịch vụ kizuna.ai.",
+    "signInRequired": "Sử dụng khóa API riêng của bạn hoặc đăng ký dịch vụ eburon.ai.",
     "signInDescription": "Đăng ký để có trải nghiệm đơn giản.",
     "targetLanguage": "Ngôn ngữ đối phương",
     "microphone": "Microphone",
@@ -527,12 +527,12 @@
     "upgradeToPremium": "Nâng cấp lên Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Vui lòng đăng nhập để sử dụng dịch vụ Kizuna AI",
+    "signInToUseEburonAI": "Vui lòng đăng nhập để sử dụng dịch vụ Eburon AI",
     "authenticationManaged": "Xác thực được quản lý tự động",
     "fetchingApiKey": "Đang lấy API key...",
     "apiKeyFetched": "Đã lấy API key thành công",
     "failedToFetchApiKey": "Không thể lấy API key",
-    "kizunaaiNotAvailable": "Kizuna AI chỉ khả dụng khi đã đăng nhập",
+    "eburonaiNotAvailable": "Eburon AI chỉ khả dụng khi đã đăng nhập",
     "signIn": "Đăng nhập",
     "signUp": "Đăng ký",
     "email": "Email",

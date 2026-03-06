@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://Eburon.kizuna.ai/schemas/test-result.schema.json",
+  "$id": "https://app.eburon.ai/schemas/test-result.schema.json",
   "title": "Evaluation Test Result",
   "description": "Schema for storing evaluation results from Realtime API translation quality assessment",
   "type": "object",

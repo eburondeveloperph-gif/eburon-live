@@ -135,19 +135,19 @@ export function hasChromeRuntime(): boolean {
 
 /**
  * Get the backend base URL based on the current environment
- * @returns The backend base URL (e.g., https://Eburon.kizuna.ai)
+ * @returns The backend base URL (e.g., https://app.eburon.ai)
  *
  * Note: Better Auth client automatically appends /api/auth to this URL.
  * For API calls that need /api prefix, use getApiUrl() instead.
  */
 export function getBackendUrl(): string {
   // Use environment variable if available, otherwise use production URL
-  return import.meta.env.VITE_BACKEND_URL || 'https://Eburon.kizuna.ai';
+  return import.meta.env.VITE_BACKEND_URL || 'https://app.eburon.ai';
 }
 
 /**
  * Get the full API URL based on the current environment
- * @returns The API URL with /api suffix (e.g., https://Eburon.kizuna.ai/api)
+ * @returns The API URL with /api suffix (e.g., https://app.eburon.ai/api)
  *
  * Use this for direct API calls (e.g., OpenAI proxy, OTT verify).
  */
@@ -172,21 +172,21 @@ export function isProductionMode(): boolean {
 }
 
 /**
- * Check if Kizuna AI features should be enabled
- * @returns true if Kizuna AI features should be shown
+ * Check if Eburon AI features should be enabled
+ * @returns true if Eburon AI features should be shown
  *
  * In development mode: always returns true
- * In production mode: returns false (unless explicitly enabled via VITE_ENABLE_KIZUNA_AI env var)
+ * In production mode: returns false (unless explicitly enabled via VITE_ENABLE_EBURON_AI env var)
  */
-export function isKizunaAIEnabled(): boolean {
-  // In development mode, always show Kizuna AI features
+export function isEburonAIEnabled(): boolean {
+  // In development mode, always show Eburon AI features
   if (isDevelopmentMode()) {
     return true;
   }
 
   // In production, check for explicit environment variable
   // Default to false if not set
-  return import.meta.env.VITE_ENABLE_KIZUNA_AI === 'true';
+  return import.meta.env.VITE_ENABLE_EBURON_AI === 'true';
 }
 
 /**

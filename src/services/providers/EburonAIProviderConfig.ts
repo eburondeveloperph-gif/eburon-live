@@ -2,21 +2,21 @@ import { ProviderConfig } from './ProviderConfig';
 import { OpenAIProviderConfig } from './OpenAIProviderConfig';
 
 /**
- * KizunaAI Provider Configuration
- * KizunaAI is OpenAI-compatible, so it extends OpenAIProviderConfig and only overrides specific fields
+ * EburonAI Provider Configuration
+ * EburonAI is OpenAI-compatible, so it extends OpenAIProviderConfig and only overrides specific fields
  */
-export class KizunaAIProviderConfig extends OpenAIProviderConfig {
+export class EburonAIProviderConfig extends OpenAIProviderConfig {
   getConfig(): ProviderConfig {
     // Get the base OpenAI configuration
     const baseConfig = super.getConfig();
     
-    // Override only the fields that are different for KizunaAI
+    // Override only the fields that are different for EburonAI
     return {
       ...baseConfig,
-      id: 'kizunaai',
-      displayName: 'KizunaAI',
-      apiKeyLabel: 'Kizuna AI Access',
-      apiKeyPlaceholder: 'Enter your KizunaAI API key',
+      id: 'eburonai',
+      displayName: 'EburonAI',
+      apiKeyLabel: 'Eburon AI Access',
+      apiKeyPlaceholder: 'Enter your EburonAI API key',
       
       // Override specific defaults that differ from OpenAI
       defaults: {

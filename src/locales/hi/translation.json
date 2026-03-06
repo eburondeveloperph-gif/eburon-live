@@ -17,7 +17,7 @@
     "autoDetect": "स्वचालित पहचान",
     "signIn": "साइन इन",
     "signUp": "साइन अप",
-    "signInRequired": "कृपया Kizuna AI को अपने प्रदाता के रूप में उपयोग करने के लिए साइन इन करें"
+    "signInRequired": "कृपया Eburon AI को अपने प्रदाता के रूप में उपयोग करने के लिए साइन इन करें"
   },
   "app": {
     "title": "Eburon",
@@ -117,7 +117,7 @@
     "fetchingApiKey": "आपके खाते से API कुंजी प्राप्त हो रही है...",
     "geminiApiKey": "Gemini API कुंजी",
     "palabraApiKey": "Palabra API कुंजी",
-    "kizunaaiApiKey": "Kizuna AI एक्सेस",
+    "eburonaiApiKey": "Eburon AI एक्सेस",
     "systemPrompt": "सिस्टम प्रॉम्प्ट",
     "selectModel": "मॉडल चुनें",
     "noModelsAvailable": "कोई मॉडल उपलब्ध नहीं",
@@ -160,7 +160,7 @@
     "changes": "नया क्या है?",
     "apiKeyManagedByBackend": "बैकएंड-प्रबंधित API कुंजी",
     "autoManaged": "स्वतः प्रबंधित",
-    "kizunaApiKeyInfo": "यह API कुंजी हमारी बैकएंड सेवा द्वारा स्वचालित रूप से प्रबंधित की जाती है।",
+    "eburonApiKeyInfo": "यह API कुंजी हमारी बैकएंड सेवा द्वारा स्वचालित रूप से प्रबंधित की जाती है।",
     "webrtcVadDisabledTitle": "WebRTC मोड में सर्वर VAD उपलब्ध नहीं है",
     "webrtcVadNotice": "WebRTC मोड में सर्वर VAD अक्षम है। WebRTC में, सर्वर भाषण का पता लगाने पर स्वचालित रूप से ऑडियो काट देता है, जिससे अनुवाद बाधित होते हैं।",
     "switchToAdvanced": "उन्नत मोड में बदलें",
@@ -241,7 +241,7 @@
     "yourLanguage": "मेरी भाषा",
     "userAccount": "उपयोगकर्ता खाता",
     "userAccountTooltip": "तकनीकी उपयोगकर्ता अपनी स्वयं की API कुंजियों का उपयोग कर सकते हैं। उपयोगकर्ता खाता सरल सेटअप के लिए डिज़ाइन किया गया है।",
-    "signInRequired": "आप अपनी स्वयं की API कुंजी का उपयोग कर सकते हैं या kizuna.ai सेवा के लिए साइन अप कर सकते हैं।",
+    "signInRequired": "आप अपनी स्वयं की API कुंजी का उपयोग कर सकते हैं या eburon.ai सेवा के लिए साइन अप कर सकते हैं।",
     "signInDescription": "सरल अनुभव के लिए साइन अप करें।",
     "targetLanguage": "दूसरे की भाषा",
     "microphone": "माइक्रोफोन",
@@ -421,7 +421,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -558,12 +558,12 @@
     "signUpError": "साइन अप विफल। कृपया पुनः प्रयास करें",
     "networkError": "नेटवर्क त्रुटि। कृपया अपना कनेक्शन जांचें",
     "unknownError": "एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें",
-    "signInToUseKizunaAI": "Kizuna AI सेवा का उपयोग करने के लिए कृपया साइन इन करें",
+    "signInToUseEburonAI": "Eburon AI सेवा का उपयोग करने के लिए कृपया साइन इन करें",
     "authenticationManaged": "प्रमाणीकरण स्वचालित रूप से प्रबंधित",
     "fetchingApiKey": "API कुंजी प्राप्त कर रहे हैं...",
     "apiKeyFetched": "API कुंजी सफलतापूर्वक प्राप्त हुई",
     "failedToFetchApiKey": "API कुंजी प्राप्त करने में विफल",
-    "kizunaaiNotAvailable": "Kizuna AI केवल साइन इन होने पर उपलब्ध है",
+    "eburonaiNotAvailable": "Eburon AI केवल साइन इन होने पर उपलब्ध है",
     "emailVerified": "ईमेल सत्यापित",
     "emailNotVerified": "ईमेल सत्यापित नहीं है। सत्यापन ईमेल पुनः भेजने के लिए क्लिक करें",
     "verify": "सत्यापित करें",

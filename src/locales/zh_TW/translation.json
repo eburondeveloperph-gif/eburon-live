@@ -17,7 +17,7 @@
     "autoDetect": "自動辨識",
     "signIn": "登入",
     "signUp": "註冊",
-    "signInRequired": "請登入以使用Kizuna AI作為您的提供商"
+    "signInRequired": "請登入以使用Eburon AI作為您的提供商"
   },
   "app": {
     "title": "Eburon",
@@ -50,7 +50,7 @@
     "yourLanguage": "我的語言",
     "userAccount": "使用者帳戶",
     "userAccountTooltip": "對於具有技術知識和自己的API金鑰的使用者，無論是否登入都可以使用自己的API金鑰。使用者帳戶是為偏好簡化設定且無需複雜配置的新使用者而設計。",
-    "signInRequired": "您可以在不登入的情況下使用自己的AI提供商和API金鑰，或註冊購買並使用kizuna.ai的API服務。",
+    "signInRequired": "您可以在不登入的情況下使用自己的AI提供商和API金鑰，或註冊購買並使用eburon.ai的API服務。",
     "signInDescription": "註冊以獲得便利體驗，無需複雜配置。",
     "targetLanguage": "對方語言",
     "microphone": "麥克風",
@@ -89,9 +89,9 @@
       "name": "Palabra AI",
       "description": "Specialized translation AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "Powered by kizuna.ai service"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "Powered by eburon.ai service"
     },
     "volcengine_st": {
       "name": "火山引擎語音翻譯",
@@ -269,7 +269,7 @@
     "fetchingApiKey": "正在從您的帳戶取得 API 金鑰...",
     "geminiApiKey": "Gemini API 金鑰",
     "palabraApiKey": "Palabra API 金鑰",
-    "kizunaaiApiKey": "Kizuna AI 存取",
+    "eburonaiApiKey": "Eburon AI 存取",
     "systemPrompt": "系統提示詞",
     "selectModel": "選擇模型",
     "noModelsAvailable": "沒有可用的模型",
@@ -312,7 +312,7 @@
     "changes": "更新內容",
     "apiKeyManagedByBackend": "後端管理的 API 金鑰",
     "autoManaged": "自動管理",
-    "kizunaApiKeyInfo": "此 API 金鑰由我們的後端服務自動管理。",
+    "eburonApiKeyInfo": "此 API 金鑰由我們的後端服務自動管理。",
     "webrtcVadDisabledTitle": "WebRTC 模式下不支援伺服器 VAD",
     "webrtcVadNotice": "WebRTC 模式下伺服器 VAD 已停用。在 WebRTC 模式中，伺服器偵測到語音時會自動截斷音訊輸出，這會導致翻譯被中斷。",
     "switchToAdvanced": "切換到進階模式",
@@ -438,7 +438,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -573,12 +573,12 @@
     "signUpError": "註冊失敗。請再試一次",
     "networkError": "網路錯誤。請檢查您的連線",
     "unknownError": "發生意外錯誤。請再試一次",
-    "signInToUseKizunaAI": "請登入以使用 Kizuna AI 服務",
+    "signInToUseEburonAI": "請登入以使用 Eburon AI 服務",
     "authenticationManaged": "身份驗證由系統自動管理",
     "fetchingApiKey": "正在取得 API 金鑰...",
     "apiKeyFetched": "已成功取得 API 金鑰",
     "failedToFetchApiKey": "取得 API 金鑰失敗",
-    "kizunaaiNotAvailable": "Kizuna AI 僅在登入後可用",
+    "eburonaiNotAvailable": "Eburon AI 僅在登入後可用",
     "emailVerified": "電子郵件已驗證",
     "emailNotVerified": "電子郵件尚未驗證。點擊重新發送驗證郵件",
     "verify": "驗證",

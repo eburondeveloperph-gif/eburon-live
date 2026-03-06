@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 General Discussion
-    url: https://github.com/kizuna-ai-lab/Eburon/discussions
+    url: https://github.com/eburondeveloperph-gif/eburon-live/discussions
     about: For general questions, ideas, or discussions that are not bug reports or feature requests
   - name: 📖 Documentation
-    url: https://github.com/kizuna-ai-lab/Eburon/blob/main/README.md
+    url: https://github.com/eburondeveloperph-gif/eburon-live/blob/main/README.md
     about: Please read our documentation before creating an issue
   - name: ⚠️ Important Notice
-    url: https://github.com/kizuna-ai-lab/Eburon/blob/main/.github/CONTRIBUTING.md
+    url: https://github.com/eburondeveloperph-gif/eburon-live/blob/main/.github/CONTRIBUTING.md
     about: Please read our contributing guidelines before submitting any issue 

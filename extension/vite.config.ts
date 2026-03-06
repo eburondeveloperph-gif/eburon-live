@@ -134,8 +134,8 @@ export default defineConfig(({ mode }) => {
       'import.meta.env.VITE_BACKEND_URL': JSON.stringify(
         envVal('VITE_BACKEND_URL', '')
       ),
-      'import.meta.env.VITE_ENABLE_KIZUNA_AI': JSON.stringify(
-        envVal('VITE_ENABLE_KIZUNA_AI', 'false', 'true')
+      'import.meta.env.VITE_ENABLE_EBURON_AI': JSON.stringify(
+        envVal('VITE_ENABLE_EBURON_AI', 'false', 'true')
       ),
       'import.meta.env.VITE_ENABLE_PALABRA_AI': JSON.stringify(
         envVal('VITE_ENABLE_PALABRA_AI', 'false')

@@ -17,7 +17,7 @@
     "autoDetect": "Deteksi Otomatis",
     "signIn": "Masuk",
     "signUp": "Daftar",
-    "signInRequired": "Silakan masuk untuk menggunakan Kizuna AI sebagai penyedia Anda"
+    "signInRequired": "Silakan masuk untuk menggunakan Eburon AI sebagai penyedia Anda"
   },
   "app": {
     "title": "Eburon",
@@ -152,7 +152,7 @@
     "fetchingApiKey": "Mengambil kunci API dari akun Anda...",
     "geminiApiKey": "Kunci API Gemini",
     "palabraApiKey": "Kunci API Palabra",
-    "kizunaaiApiKey": "Akses Kizuna AI",
+    "eburonaiApiKey": "Akses Eburon AI",
     "systemPrompt": "Prompt Sistem",
     "selectModel": "Pilih model",
     "noModelsAvailable": "Tidak ada model tersedia",
@@ -195,7 +195,7 @@
     "changes": "Yang baru",
     "apiKeyManagedByBackend": "Kunci API dikelola backend",
     "autoManaged": "Dikelola otomatis",
-    "kizunaApiKeyInfo": "Kunci API ini dikelola secara otomatis oleh layanan backend kami.",
+    "eburonApiKeyInfo": "Kunci API ini dikelola secara otomatis oleh layanan backend kami.",
     "webrtcVadDisabledTitle": "VAD Server tidak tersedia dalam mode WebRTC",
     "webrtcVadNotice": "VAD Server dinonaktifkan dalam mode WebRTC. Di WebRTC, server secara otomatis memotong audio saat mendeteksi ucapan, yang mengganggu terjemahan.",
     "switchToAdvanced": "Beralih ke mode lanjutan",
@@ -248,7 +248,7 @@
     "yourLanguage": "Bahasa saya",
     "userAccount": "Akun Pengguna",
     "userAccountTooltip": "Pengguna teknis dapat menggunakan kunci API mereka sendiri. Akun Pengguna dirancang untuk pengaturan yang disederhanakan.",
-    "signInRequired": "Anda dapat menggunakan kunci API sendiri atau mendaftar untuk layanan kizuna.ai.",
+    "signInRequired": "Anda dapat menggunakan kunci API sendiri atau mendaftar untuk layanan eburon.ai.",
     "signInDescription": "Daftar untuk pengalaman yang disederhanakan.",
     "targetLanguage": "Bahasa lawan bicara",
     "microphone": "Mikrofon",
@@ -469,7 +469,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -604,12 +604,12 @@
     "signUpError": "Gagal mendaftar. Silakan coba lagi",
     "networkError": "Kesalahan jaringan. Silakan periksa koneksi Anda",
     "unknownError": "Terjadi kesalahan yang tidak terduga. Silakan coba lagi",
-    "signInToUseKizunaAI": "Silakan masuk untuk menggunakan layanan Kizuna AI",
+    "signInToUseEburonAI": "Silakan masuk untuk menggunakan layanan Eburon AI",
     "authenticationManaged": "Autentikasi dikelola secara otomatis",
     "fetchingApiKey": "Mengambil kunci API...",
     "apiKeyFetched": "Kunci API berhasil diperoleh",
     "failedToFetchApiKey": "Gagal mendapatkan kunci API",
-    "kizunaaiNotAvailable": "Kizuna AI hanya tersedia saat masuk",
+    "eburonaiNotAvailable": "Eburon AI hanya tersedia saat masuk",
     "emailVerified": "Email terverifikasi",
     "emailNotVerified": "Email belum diverifikasi. Klik untuk mengirim ulang email verifikasi",
     "verify": "Verifikasi",

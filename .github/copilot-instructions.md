@@ -97,7 +97,7 @@ LLM-as-Judge framework for translation quality. Run `npm run eval`. Test cases i
 
 ## Environment Variables
 
-- `VITE_BACKEND_URL` — Backend API (default: `https://Eburon.kizuna.ai`)
+- `VITE_BACKEND_URL` — Backend API (default: `https://app.eburon.ai`)
 - `VITE_ENABLE_KIZUNA_AI` — Feature flag for Kizuna AI provider in production
 - Feature flags (`isKizunaAIEnabled()`, etc.) return `true` in dev mode automatically
 

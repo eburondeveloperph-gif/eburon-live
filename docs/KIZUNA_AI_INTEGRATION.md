@@ -1,8 +1,8 @@
-# Kizuna AI Provider Integration
+# Eburon AI Provider Integration
 
 ## Overview
 
-Kizuna AI is a new AI provider that has been fully integrated into the Eburon application. Unlike other providers that require users to manage their own API keys, Kizuna AI uses a backend-managed authentication system where API keys are automatically provided to authenticated users.
+Eburon AI is a new AI provider that has been fully integrated into the Eburon application. Unlike other providers that require users to manage their own API keys, Eburon AI uses a backend-managed authentication system where API keys are automatically provided to authenticated users.
 
 ## Key Features
 
@@ -17,19 +17,19 @@ Kizuna AI is a new AI provider that has been fully integrated into the Eburon ap
 ### 1. Provider System Integration
 
 **File**: `src/types/Provider.ts`
-- Added `KIZUNA_AI = 'kizunaai'` to Provider enum
+- Added `EBURON_AI = 'eburonai'` to Provider enum
 - Updated all provider arrays and utility functions
 
 ### 2. Settings Context Integration
 
 **File**: `src/contexts/SettingsContext.tsx`
-- Added `KizunaAISettings` interface (OpenAI-compatible without apiKey field)
+- Added `EburonAISettings` interface (OpenAI-compatible without apiKey field)
 - Integrated with `ApiKeyService` for backend key fetching
 - Added caching mechanism (5-minute cache)
 
 ### 3. Provider Configuration
 
-**File**: `src/services/providers/KizunaAIProviderConfig.ts`
+**File**: `src/services/providers/EburonAIProviderConfig.ts`
 - Extends OpenAI configuration with `requiresAuth: true` flag
 - Same models, languages, and capabilities as OpenAI
 - Proper display name and branding
@@ -45,7 +45,7 @@ Kizuna AI is a new AI provider that has been fully integrated into the Eburon ap
 ### 5. Client Integration
 
 **File**: `src/services/clients/ClientFactory.ts`
-- Kizuna AI uses OpenAI client implementation
+- Eburon AI uses OpenAI client implementation
 - Automatic API key injection from backend
 - Full compatibility with existing OpenAI features
 
@@ -63,36 +63,36 @@ Kizuna AI is a new AI provider that has been fully integrated into the Eburon ap
 - Added User Account section for authentication
 - Shows sign-in prompt for unauthenticated users
 - Displays user info and account status when signed in
-- Handles KizunaAI provider selection and validation
+- Handles EburonAI provider selection and validation
 
 ### 8. Internationalization
 
 **File**: `src/locales/en/translation.json`
-- Added translations for Kizuna AI provider
+- Added translations for Eburon AI provider
 - Authentication-related messages
 - User account management text
 
 ## Authentication Flow
 
 1. **User Signs In**: Via Better Auth authentication system
-2. **Provider Selection**: Kizuna AI becomes available in provider dropdown
+2. **Provider Selection**: Eburon AI becomes available in provider dropdown
 3. **Automatic Key Fetch**: `ApiKeyService` fetches API key from backend
 4. **Caching**: Key is cached for 5 minutes to reduce backend calls
-5. **Provider Activation**: User can now use Kizuna AI for translations
+5. **Provider Activation**: User can now use Eburon AI for translations
 
 ## API Endpoint Details
 
 ### GET /api/user/api-key
 
-**Purpose**: Retrieve or create user's Kizuna AI API key
+**Purpose**: Retrieve or create user's Eburon AI API key
 
 **Authentication**: Required (Better Auth session token)
 
 **Response**:
 ```json
 {
-  "apiKey": "sk-kizuna-abc123...xyz",
-  "provider": "kizunaai"
+  "apiKey": "sk-eburon-abc123...xyz",
+  "provider": "eburonai"
 }
 ```
 
@@ -107,8 +107,8 @@ Kizuna AI is a new AI provider that has been fully integrated into the Eburon ap
 ### Provider Configuration
 ```typescript
 {
-  id: 'kizunaai',
-  displayName: 'Kizuna AI',
+  id: 'eburonai',
+  displayName: 'Eburon AI',
   requiresAuth: true, // Key difference from other providers
   models: [...], // Same as OpenAI models
   languages: [...], // Same as OpenAI languages
@@ -118,7 +118,7 @@ Kizuna AI is a new AI provider that has been fully integrated into the Eburon ap
 
 ### Settings Interface
 ```typescript
-interface KizunaAISettings {
+interface EburonAISettings {
   model: string;
   voice: string;
   sourceLanguage: string;
@@ -131,19 +131,19 @@ interface KizunaAISettings {
 
 ### For New Users
 1. See "Sign In" prompt in User Account section
-2. Click sign in to access Kizuna AI service
+2. Click sign in to access Eburon AI service
 3. No need to manage API keys manually
 4. Immediate access to AI translations
 
 ### For Technical Users
 1. Can still use their own API keys with other providers
-2. Kizuna AI available as an additional option when authenticated
+2. Eburon AI available as an additional option when authenticated
 3. Seamless switching between providers
 
 ## Files Modified/Created
 
 ### New Files
-- `src/services/providers/KizunaAIProviderConfig.ts`
+- `src/services/providers/EburonAIProviderConfig.ts`
 - `src/services/ApiKeyService.ts`
 - `backend-cf/src/routes/user.ts` (endpoint added)
 
@@ -159,11 +159,11 @@ interface KizunaAISettings {
 
 ### Manual Testing Checklist
 - [ ] User can sign in via Better Auth
-- [ ] Kizuna AI appears in provider dropdown when authenticated
+- [ ] Eburon AI appears in provider dropdown when authenticated
 - [ ] API key is automatically fetched from backend
 - [ ] Provider works for real-time translation
 - [ ] Switching between providers works correctly
-- [ ] Sign out removes access to Kizuna AI
+- [ ] Sign out removes access to Eburon AI
 
 ### Error Scenarios
 - [ ] Backend API failure - graceful degradation
@@ -183,7 +183,7 @@ interface KizunaAISettings {
 
 1. **API Key Storage**: Keys are never stored in local storage
 2. **Backend Validation**: All keys validated server-side
-3. **Authentication Required**: No anonymous access to Kizuna AI
+3. **Authentication Required**: No anonymous access to Eburon AI
 4. **Secure Transmission**: HTTPS for all API communications
 5. **Token Expiry**: Automatic token refresh handling
 

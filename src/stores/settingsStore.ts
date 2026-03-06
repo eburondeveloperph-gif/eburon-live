@@ -34,7 +34,7 @@ export interface CommonSettings {
 // Transport type for OpenAI Realtime API
 export type TransportType = 'websocket' | 'webrtc';
 
-// OpenAI-compatible Settings (used by OpenAI and KizunaAI)
+// OpenAI-compatible Settings (used by OpenAI and EburonAI)
 export interface OpenAICompatibleSettingsBase {
   apiKey: string;
   model: string;
@@ -59,7 +59,7 @@ export interface OpenAICompatibleSettings extends OpenAICompatibleSettingsBase {
 }
 
 export type OpenAISettings = OpenAICompatibleSettingsBase;
-export type KizunaAISettings = OpenAICompatibleSettingsBase;
+export type EburonAISettings = OpenAICompatibleSettingsBase;
 
 // Gemini Settings
 export interface GeminiSettings {
@@ -213,7 +213,7 @@ const defaultOpenAICompatibleSettings: OpenAICompatibleSettings = {
   customEndpoint: '',
 };
 
-const defaultKizunaAISettings: KizunaAISettings = {
+const defaultEburonAISettings: EburonAISettings = {
   ...defaultOpenAICompatibleSettingsBase,
   transcriptModel: 'whisper-1',
 };
@@ -291,7 +291,7 @@ interface SettingsStore {
   gemini: GeminiSettings;
   openaiCompatible: OpenAICompatibleSettings;
   palabraai: PalabraAISettings;
-  kizunaai: KizunaAISettings;
+  eburonai: EburonAISettings;
   volcengineST: VolcengineSTSettings;
   volcengineAST2: VolcengineAST2Settings;
   localInference: LocalInferenceSettings;
@@ -306,9 +306,9 @@ interface SettingsStore {
   availableModels: FilteredModel[];
   loadingModels: boolean;
 
-  // Kizuna AI state
-  isKizunaKeyFetching: boolean;
-  kizunaKeyError: string | null;
+  // Eburon AI state
+  isEburonKeyFetching: boolean;
+  eburonKeyError: string | null;
 
   // Navigation state
   settingsNavigationTarget: string | null;
@@ -331,7 +331,7 @@ interface SettingsStore {
   updateGemini: (settings: Partial<GeminiSettings>) => void;
   updateOpenAICompatible: (settings: Partial<OpenAICompatibleSettings>) => void;
   updatePalabraAI: (settings: Partial<PalabraAISettings>) => void;
-  updateKizunaAI: (settings: Partial<KizunaAISettings>) => void;
+  updateEburonAI: (settings: Partial<EburonAISettings>) => void;
   updateVolcengineST: (settings: Partial<VolcengineSTSettings>) => void;
   updateVolcengineAST2: (settings: Partial<VolcengineAST2Settings>) => void;
   updateLocalInference: (settings: Partial<LocalInferenceSettings>) => void;
@@ -339,12 +339,12 @@ interface SettingsStore {
   // Async actions
   validateApiKey: (getAuthToken?: () => Promise<string | null>) => Promise<ApiKeyValidationResult>;
   fetchAvailableModels: (getAuthToken?: () => Promise<string | null>) => Promise<void>;
-  ensureKizunaApiKey: (getToken: () => Promise<string | null>, isSignedIn: boolean) => Promise<boolean>;
+  ensureEburonApiKey: (getToken: () => Promise<string | null>, isSignedIn: boolean) => Promise<boolean>;
   loadSettings: () => Promise<void>;
   clearCache: () => void;
 
   // Helper methods
-  getCurrentProviderSettings: () => OpenAISettings | GeminiSettings | OpenAICompatibleSettings | PalabraAISettings | KizunaAISettings | VolcengineSTSettings | VolcengineAST2Settings | LocalInferenceSettings;
+  getCurrentProviderSettings: () => OpenAISettings | GeminiSettings | OpenAICompatibleSettings | PalabraAISettings | EburonAISettings | VolcengineSTSettings | VolcengineAST2Settings | LocalInferenceSettings;
   getCurrentProviderConfig: () => ProviderConfig;
   getProcessedSystemInstructions: (forParticipant?: boolean) => string;
   createSessionConfig: (systemInstructions: string) => SessionConfig;
@@ -486,7 +486,7 @@ const useSettingsStore = create<SettingsStore>()(
     gemini: defaultGeminiSettings,
     openaiCompatible: defaultOpenAICompatibleSettings,
     palabraai: defaultPalabraAISettings,
-    kizunaai: defaultKizunaAISettings,
+    eburonai: defaultEburonAISettings,
     volcengineST: defaultVolcengineSTSettings,
     volcengineAST2: defaultVolcengineAST2Settings,
     localInference: defaultLocalInferenceSettings,
@@ -499,8 +499,8 @@ const useSettingsStore = create<SettingsStore>()(
     availableModels: [],
     loadingModels: false,
 
-    isKizunaKeyFetching: false,
-    kizunaKeyError: null,
+    isEburonKeyFetching: false,
+    eburonKeyError: null,
 
     settingsNavigationTarget: null,
 
@@ -517,9 +517,9 @@ const useSettingsStore = create<SettingsStore>()(
       state.clearCache();
 
       // Auto-validate API key for the new provider
-      // Note: For KizunaAI, this will be handled by SettingsInitializer
+      // Note: For EburonAI, this will be handled by SettingsInitializer
       // Local inference doesn't need API key validation
-      if (provider !== Provider.KIZUNA_AI && provider !== Provider.LOCAL_INFERENCE) {
+      if (provider !== Provider.EBURON_AI && provider !== Provider.LOCAL_INFERENCE) {
         // Small delay to ensure state is updated
         setTimeout(() => {
           state.validateApiKey();
@@ -636,9 +636,9 @@ const useSettingsStore = create<SettingsStore>()(
       }
     },
 
-    updateKizunaAI: async (settings) => {
+    updateEburonAI: async (settings) => {
       set((state) => {
-        const updatedSettings = { ...state.kizunaai, ...settings };
+        const updatedSettings = { ...state.eburonai, ...settings };
 
         // WebRTC mode: Server automatically truncates audio on user speech (API design)
         // Force disable server VAD to prevent translation interruption
@@ -646,18 +646,18 @@ const useSettingsStore = create<SettingsStore>()(
           updatedSettings.turnDetectionMode = 'Disabled';
         }
 
-        return { kizunaai: updatedSettings };
+        return { eburonai: updatedSettings };
       });
 
       const service = ServiceFactory.getSettingsService();
       const state = get();
       // Save all updated settings including auto-changed turnDetectionMode
-      const settingsToSave = settings.transportType === 'webrtc' && state.kizunaai.turnDetectionMode === 'Disabled'
+      const settingsToSave = settings.transportType === 'webrtc' && state.eburonai.turnDetectionMode === 'Disabled'
         ? { ...settings, turnDetectionMode: 'Disabled' }
         : settings;
       for (const [key, value] of Object.entries(settingsToSave)) {
-        if (key === 'apiKey') continue; // Don't persist Kizuna AI API key
-        await service.setSetting(`settings.kizunaai.${key}`, value);
+        if (key === 'apiKey') continue; // Don't persist Eburon AI API key
+        await service.setSetting(`settings.eburonai.${key}`, value);
       }
     },
 
@@ -733,13 +733,13 @@ const useSettingsStore = create<SettingsStore>()(
         return { valid: ready, message: ready ? '' : i18n.t('settings.localInferenceModelsRequired'), validating: false };
       }
 
-      // For KizunaAI, ensure we have an API key first
-      if (provider === Provider.KIZUNA_AI) {
-        const hasKey = await state.ensureKizunaApiKey(getAuthToken!, true);
+      // For EburonAI, ensure we have an API key first
+      if (provider === Provider.EBURON_AI) {
+        const hasKey = await state.ensureEburonApiKey(getAuthToken!, true);
         if (!hasKey) {
           return {
             valid: false,
-            message: state.kizunaKeyError || 'Failed to fetch Kizuna AI API key',
+            message: state.eburonKeyError || 'Failed to fetch Eburon AI API key',
             validating: false
           };
         }
@@ -771,7 +771,7 @@ const useSettingsStore = create<SettingsStore>()(
         const compatSettings = currentSettings as OpenAICompatibleSettings;
         apiKey = compatSettings.apiKey || '';
         customEndpoint = compatSettings.customEndpoint;
-      } else if (provider === Provider.KIZUNA_AI && getAuthToken) {
+      } else if (provider === Provider.EBURON_AI && getAuthToken) {
         apiKey = await getAuthToken() || '';
       } else if (provider === Provider.VOLCENGINE_ST) {
         // Volcengine ST uses accessKeyId as apiKey and secretAccessKey as clientSecret
@@ -906,47 +906,47 @@ const useSettingsStore = create<SettingsStore>()(
       set({loadingModels: false});
     },
 
-    ensureKizunaApiKey: async (getToken, isSignedIn) => {
+    ensureEburonApiKey: async (getToken, isSignedIn) => {
       const state = get();
 
-      if (state.kizunaai.apiKey && state.kizunaai.apiKey.trim() !== '') {
+      if (state.eburonai.apiKey && state.eburonai.apiKey.trim() !== '') {
         return true;
       }
 
-      if (state.isKizunaKeyFetching) {
+      if (state.isEburonKeyFetching) {
         console.log('[SettingsStore] Token fetch already in progress');
         return false;
       }
 
       if (!isSignedIn || !getToken) {
         console.log('[SettingsStore] Cannot get token - user not signed in');
-        set({kizunaKeyError: 'User not signed in'});
+        set({eburonKeyError: 'User not signed in'});
         return false;
       }
 
-      set({isKizunaKeyFetching: true, kizunaKeyError: null});
+      set({isEburonKeyFetching: true, eburonKeyError: null});
 
       try {
-        console.log('[SettingsStore] Getting auth session for Kizuna AI...');
+        console.log('[SettingsStore] Getting auth session for Eburon AI...');
         const authToken = await getToken();
 
         if (authToken) {
-          console.log('[SettingsStore] Successfully got auth session for Kizuna AI');
+          console.log('[SettingsStore] Successfully got auth session for Eburon AI');
           set((state) => ({
-            kizunaai: {...state.kizunaai, apiKey: authToken},
-            isKizunaKeyFetching: false
+            eburonai: {...state.eburonai, apiKey: authToken},
+            isEburonKeyFetching: false
           }));
           return true;
         } else {
           const error = 'Failed to get auth session';
           console.warn('[SettingsStore] ' + error);
-          set({kizunaKeyError: error, isKizunaKeyFetching: false});
+          set({eburonKeyError: error, isEburonKeyFetching: false});
           return false;
         }
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'Unknown error getting auth session';
-        console.error('[SettingsStore] Error getting auth session for Kizuna AI:', errorMessage);
-        set({kizunaKeyError: errorMessage, isKizunaKeyFetching: false});
+        console.error('[SettingsStore] Error getting auth session for Eburon AI:', errorMessage);
+        set({eburonKeyError: errorMessage, isEburonKeyFetching: false});
         return false;
       }
     },
@@ -976,12 +976,12 @@ const useSettingsStore = create<SettingsStore>()(
           return settings as T;
         };
 
-        const [openai, gemini, openaiCompatible, palabraai, kizunaai, volcengineST, volcengineAST2, localInference] = await Promise.all([
+        const [openai, gemini, openaiCompatible, palabraai, eburonai, volcengineST, volcengineAST2, localInference] = await Promise.all([
           loadProviderSettings('settings.openai', defaultOpenAISettings),
           loadProviderSettings('settings.gemini', defaultGeminiSettings),
           loadProviderSettings('settings.openaiCompatible', defaultOpenAICompatibleSettings),
           loadProviderSettings('settings.palabraai', defaultPalabraAISettings),
-          loadProviderSettings('settings.kizunaai', defaultKizunaAISettings),
+          loadProviderSettings('settings.eburonai', defaultEburonAISettings),
           loadProviderSettings('settings.volcengineST', defaultVolcengineSTSettings),
           loadProviderSettings('settings.volcengineAST2', defaultVolcengineAST2Settings),
           loadProviderSettings('settings.localInference', defaultLocalInferenceSettings),
@@ -999,7 +999,7 @@ const useSettingsStore = create<SettingsStore>()(
           gemini,
           openaiCompatible,
           palabraai,
-          kizunaai,
+          eburonai,
           volcengineST,
           volcengineAST2,
           localInference,
@@ -1032,8 +1032,8 @@ const useSettingsStore = create<SettingsStore>()(
           return state.gemini;
         case Provider.PALABRA_AI:
           return state.palabraai;
-        case Provider.KIZUNA_AI:
-          return state.kizunaai;
+        case Provider.EBURON_AI:
+          return state.eburonai;
         case Provider.VOLCENGINE_ST:
           return state.volcengineST;
         case Provider.VOLCENGINE_AST2:
@@ -1096,8 +1096,8 @@ const useSettingsStore = create<SettingsStore>()(
           return createGeminiSessionConfig(state.gemini, systemInstructions);
         case Provider.PALABRA_AI:
           return createPalabraAISessionConfig(state.palabraai, systemInstructions);
-        case Provider.KIZUNA_AI:
-          return createOpenAISessionConfig(state.kizunaai, systemInstructions);
+        case Provider.EBURON_AI:
+          return createOpenAISessionConfig(state.eburonai, systemInstructions);
         case Provider.VOLCENGINE_ST:
           return createVolcengineSTSessionConfig(state.volcengineST, systemInstructions);
         case Provider.VOLCENGINE_AST2:
@@ -1131,7 +1131,7 @@ export const useOpenAISettings = () => useSettingsStore((state) => state.openai)
 export const useGeminiSettings = () => useSettingsStore((state) => state.gemini);
 export const useOpenAICompatibleSettings = () => useSettingsStore((state) => state.openaiCompatible);
 export const usePalabraAISettings = () => useSettingsStore((state) => state.palabraai);
-export const useKizunaAISettings = () => useSettingsStore((state) => state.kizunaai);
+export const useEburonAISettings = () => useSettingsStore((state) => state.eburonai);
 export const useVolcengineSTSettings = () => useSettingsStore((state) => state.volcengineST);
 export const useVolcengineAST2Settings = () => useSettingsStore((state) => state.volcengineAST2);
 export const useLocalInferenceSettings = () => useSettingsStore((state) => state.localInference);
@@ -1148,9 +1148,9 @@ export const useValidationMessage = () => useSettingsStore((state) => state.vali
 export const useAvailableModels = () => useSettingsStore((state) => state.availableModels);
 export const useLoadingModels = () => useSettingsStore((state) => state.loadingModels);
 
-// Kizuna state
-export const useIsKizunaKeyFetching = () => useSettingsStore((state) => state.isKizunaKeyFetching);
-export const useKizunaKeyError = () => useSettingsStore((state) => state.kizunaKeyError);
+// Eburon state
+export const useIsEburonKeyFetching = () => useSettingsStore((state) => state.isEburonKeyFetching);
+export const useEburonKeyError = () => useSettingsStore((state) => state.eburonKeyError);
 
 // Navigation
 export const useSettingsNavigationTarget = () => useSettingsStore((state) => state.settingsNavigationTarget);
@@ -1171,14 +1171,14 @@ export const useUpdateOpenAI = () => useSettingsStore((state) => state.updateOpe
 export const useUpdateGemini = () => useSettingsStore((state) => state.updateGemini);
 export const useUpdateOpenAICompatible = () => useSettingsStore((state) => state.updateOpenAICompatible);
 export const useUpdatePalabraAI = () => useSettingsStore((state) => state.updatePalabraAI);
-export const useUpdateKizunaAI = () => useSettingsStore((state) => state.updateKizunaAI);
+export const useUpdateEburonAI = () => useSettingsStore((state) => state.updateEburonAI);
 export const useUpdateVolcengineST = () => useSettingsStore((state) => state.updateVolcengineST);
 export const useUpdateVolcengineAST2 = () => useSettingsStore((state) => state.updateVolcengineAST2);
 export const useUpdateLocalInference = () => useSettingsStore((state) => state.updateLocalInference);
 
 export const useValidateApiKey = () => useSettingsStore((state) => state.validateApiKey);
 export const useFetchAvailableModels = () => useSettingsStore((state) => state.fetchAvailableModels);
-export const useEnsureKizunaApiKey = () => useSettingsStore((state) => state.ensureKizunaApiKey);
+export const useEnsureEburonApiKey = () => useSettingsStore((state) => state.ensureEburonApiKey);
 export const useLoadSettings = () => useSettingsStore((state) => state.loadSettings);
 export const useClearCache = () => useSettingsStore((state) => state.clearCache);
 

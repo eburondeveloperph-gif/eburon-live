@@ -17,7 +17,7 @@
     "autoDetect": "自動検出",
     "signIn": "サインイン",
     "signUp": "サインアップ",
-    "signInRequired": "Kizuna AIをプロバイダーとして使用するにはサインインしてください"
+    "signInRequired": "Eburon AIをプロバイダーとして使用するにはサインインしてください"
   },
   "app": {
     "title": "Eburon",
@@ -160,7 +160,7 @@
     "fetchingApiKey": "アカウントからAPIキーを取得中...",
     "geminiApiKey": "Gemini APIキー",
     "palabraApiKey": "Palabra APIキー",
-    "kizunaaiApiKey": "Kizuna AI アクセス",
+    "eburonaiApiKey": "Eburon AI アクセス",
     "systemPrompt": "システムプロンプト",
     "selectModel": "モデルを選択",
     "noModelsAvailable": "利用可能なモデルがありません",
@@ -203,7 +203,7 @@
     "changes": "新機能",
     "apiKeyManagedByBackend": "バックエンド管理のAPIキー",
     "autoManaged": "自動管理",
-    "kizunaApiKeyInfo": "このAPIキーはバックエンドサービスによって自動的に管理されます。",
+    "eburonApiKeyInfo": "このAPIキーはバックエンドサービスによって自動的に管理されます。",
     "switchToAdvanced": "アドバンスモードに切替",
     "switchToBasic": "ベーシックモードに切替",
     "advancedMode": "アドバンス",
@@ -330,7 +330,7 @@
         },
         "account": {
           "title": "ステップ 3：ユーザーアカウント",
-          "content": "簡単な体験のためにサインインするか、ログインせずに独自のAPIキーを使用します。新規ユーザーはkizuna.aiのAPIサービスに登録できます。"
+          "content": "簡単な体験のためにサインインするか、ログインせずに独自のAPIキーを使用します。新規ユーザーはeburon.aiのAPIサービスに登録できます。"
         },
         "languages": {
           "title": "ステップ 4：言語を選択",
@@ -449,7 +449,7 @@
     "yourLanguage": "自分の言語",
     "userAccount": "ユーザーアカウント",
     "userAccountTooltip": "技術的な知識と独自のAPIキーをお持ちのユーザーは、ログインの有無に関わらず独自のAPIキーを使用できます。ユーザーアカウントは、複雑な設定なしで簡単にセットアップしたい新規ユーザー向けに設計されています。",
-    "signInRequired": "ログインせずに独自のAIプロバイダーとAPIキーを使用するか、kizuna.aiのAPIサービスを購入して使用するために登録できます。",
+    "signInRequired": "ログインせずに独自のAIプロバイダーとAPIキーを使用するか、eburon.aiのAPIサービスを購入して使用するために登録できます。",
     "signInDescription": "複雑な設定なしで便利な体験をするために登録してください。",
     "targetLanguage": "相手の言語",
     "microphone": "マイクロフォン",
@@ -489,9 +489,9 @@
       "name": "Palabra AI",
       "description": "専門翻訳AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "kizuna.aiサービス搭載"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "eburon.aiサービス搭載"
     },
     "volcengine_st": {
       "name": "Volcengine 音声翻訳",

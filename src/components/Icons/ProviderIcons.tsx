@@ -101,11 +101,11 @@ export const PalabraAIIcon: React.FC<IconProps> = ({ size = 24, className, style
   );
 };
 
-/** Kizuna AI logo - uses the project's own brand icon (not in LobeHub) */
-export const KizunaAIIcon: React.FC<IconProps> = ({ size = 24, className, style }) => (
+/** Eburon AI logo - uses the project's own brand icon (not in LobeHub) */
+export const EburonAIIcon: React.FC<IconProps> = ({ size = 24, className, style }) => (
   <img
     src={new URL('../../assets/logo.png', import.meta.url).href}
-    alt="Kizuna AI"
+    alt="Eburon AI"
     width={size}
     height={size}
     className={className}

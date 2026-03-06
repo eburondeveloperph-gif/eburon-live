@@ -1,7 +1,7 @@
 /**
  * Audio format conversion utilities for sherpa-onnx WASM integration.
  * sherpa-onnx expects Float32Array @ 16kHz in range [-1.0, 1.0].
- * sokuji records Int16Array @ 24kHz.
+ * eburon records Int16Array @ 24kHz.
  */
 
 /**

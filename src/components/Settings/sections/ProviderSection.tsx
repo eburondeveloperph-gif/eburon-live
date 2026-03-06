@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Key, Zap, HelpCircle, CircleHelp, ChevronDown, ChevronUp, CheckCircle, AlertCircle, FlaskConical, ExternalLink, X } from 'lucide-react';
-import { OpenAIIcon, GeminiIcon, PalabraAIIcon, KizunaAIIcon, VolcengineIcon } from '../../Icons/ProviderIcons';
+import { OpenAIIcon, GeminiIcon, PalabraAIIcon, EburonAIIcon, VolcengineIcon } from '../../Icons/ProviderIcons';
 import { useTranslation, Trans } from 'react-i18next';
 import Tooltip from '../../Tooltip/Tooltip';
 import {
@@ -9,7 +9,7 @@ import {
   useGeminiSettings,
   useOpenAICompatibleSettings,
   usePalabraAISettings,
-  useKizunaAISettings,
+  useEburonAISettings,
   useVolcengineSTSettings,
   useVolcengineAST2Settings,
   useIsApiKeyValid,
@@ -23,8 +23,8 @@ import {
   useValidateApiKey,
   useIsValidating,
   useValidationMessage,
-  useIsKizunaKeyFetching,
-  useKizunaKeyError,
+  useIsEburonKeyFetching,
+  useEburonKeyError,
   useSetUIMode,
   useNavigateToSettings,
 } from '../../../stores/settingsStore';
@@ -35,15 +35,15 @@ import { isElectron } from '../../../utils/environment';
 import { useAnalytics } from '../../../lib/analytics';
 
 const TUTORIAL_URLS: Partial<Record<ProviderType, string>> = {
-  [Provider.OPENAI]: 'https://sokuji.kizuna.ai/docs/tutorials/openai-setup',
-  [Provider.GEMINI]: 'https://sokuji.kizuna.ai/docs/tutorials/gemini-setup',
-  [Provider.PALABRA_AI]: 'https://sokuji.kizuna.ai/docs/tutorials/palabraai-setup',
-  [Provider.OPENAI_COMPATIBLE]: 'https://sokuji.kizuna.ai/docs/tutorials/openai-compatible-setup',
-  [Provider.VOLCENGINE_AST2]: 'https://sokuji.kizuna.ai/docs/tutorials/volcengine-ast2-setup',
-  [Provider.LOCAL_INFERENCE]: 'https://sokuji.kizuna.ai/docs/tutorials/local-inference-setup',
+  [Provider.OPENAI]: 'https://app.eburon.ai/docs/tutorials/openai-setup',
+  [Provider.GEMINI]: 'https://app.eburon.ai/docs/tutorials/gemini-setup',
+  [Provider.PALABRA_AI]: 'https://app.eburon.ai/docs/tutorials/palabraai-setup',
+  [Provider.OPENAI_COMPATIBLE]: 'https://app.eburon.ai/docs/tutorials/openai-compatible-setup',
+  [Provider.VOLCENGINE_AST2]: 'https://app.eburon.ai/docs/tutorials/volcengine-ast2-setup',
+  [Provider.LOCAL_INFERENCE]: 'https://app.eburon.ai/docs/tutorials/local-inference-setup',
 };
 
-const DISMISSED_KEY = 'sokuji-dismissed-tutorials';
+const DISMISSED_KEY = 'eburon-dismissed-tutorials';
 
 interface ProviderSectionProps {
   isSessionActive: boolean;
@@ -70,7 +70,7 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
   const geminiSettings = useGeminiSettings();
   const openAICompatibleSettings = useOpenAICompatibleSettings();
   const palabraAISettings = usePalabraAISettings();
-  const kizunaAISettings = useKizunaAISettings();
+  const eburonAISettings = useEburonAISettings();
   const volcengineSTSettings = useVolcengineSTSettings();
   const volcengineAST2Settings = useVolcengineAST2Settings();
   const isApiKeyValid = useIsApiKeyValid();
@@ -85,8 +85,8 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
   const validateApiKey = useValidateApiKey();
   const isValidating = useIsValidating();
   const validationMessage = useValidationMessage();
-  const isKizunaKeyFetching = useIsKizunaKeyFetching();
-  const kizunaKeyError = useKizunaKeyError();
+  const isEburonKeyFetching = useIsEburonKeyFetching();
+  const eburonKeyError = useEburonKeyError();
   const setUIMode = useSetUIMode();
   const navigateToSettings = useNavigateToSettings();
 
@@ -132,8 +132,8 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
         return openAICompatibleSettings.apiKey;
       case Provider.PALABRA_AI:
         return palabraAISettings.clientId;
-      case Provider.KIZUNA_AI:
-        return kizunaAISettings.apiKey || '';
+      case Provider.EBURON_AI:
+        return eburonAISettings.apiKey || '';
       case Provider.VOLCENGINE_ST:
         return volcengineSTSettings.accessKeyId;
       case Provider.VOLCENGINE_AST2:
@@ -158,8 +158,8 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
       case Provider.PALABRA_AI:
         updatePalabraAISettings({ clientId: value });
         break;
-      case Provider.KIZUNA_AI:
-        // KizunaAI now uses a regular API key
+      case Provider.EBURON_AI:
+        // EburonAI now uses a regular API key
         break;
       case Provider.VOLCENGINE_ST:
         updateVolcengineSTSettings({ accessKeyId: value });
@@ -239,11 +239,11 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
           icon: PalabraAIIcon,
           description: t('providers.palabraai.description')
         };
-      case Provider.KIZUNA_AI:
+      case Provider.EBURON_AI:
         return {
-          name: t('providers.kizunaai.name'),
-          icon: KizunaAIIcon,
-          description: t('providers.kizunaai.description')
+          name: t('providers.eburonai.name'),
+          icon: EburonAIIcon,
+          description: t('providers.eburonai.description')
         };
       case Provider.VOLCENGINE_ST:
         return {
@@ -260,7 +260,7 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
       case Provider.LOCAL_INFERENCE:
         return {
           name: t('providers.local_inference.name', 'Local (Offline)'),
-          icon: KizunaAIIcon,
+          icon: EburonAIIcon,
           description: t('providers.local_inference.description', 'Offline ASR + Translation + TTS')
         };
       default:
@@ -286,12 +286,12 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
               <p>{t('simpleSettings.apiKeyHelpTooltip')}</p>
               <p style={{ marginTop: '8px' }}>{t('simpleSettings.apiKeyHelpTooltip2')}</p>
               <a
-                href="https://kizuna-ai-lab.github.io/Eburon/supported-ai-providers.html"
+                href="https://eburondeveloperph-gif.github.io/Eburon/supported-ai-providers.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: '#10a37f', textDecoration: 'underline' }}
               >
-                https://kizuna-ai-lab.github.io/Eburon/supported-ai-providers.html
+                https://eburondeveloperph-gif.github.io/Eburon/supported-ai-providers.html
               </a>
             </div>
           }
@@ -401,13 +401,13 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
         </div>
       )}
 
-      {/* API Key Input or Kizuna AI Status or Local Inference (no key needed) */}
+      {/* API Key Input or Eburon AI Status or Local Inference (no key needed) */}
       {provider === Provider.LOCAL_INFERENCE ? (
         <div className="api-key-info">
           <CheckCircle size={16} className="success-icon" />
           <span>{t('providers.local_inference.noKeyRequired', 'No API key required — runs entirely on your device')}</span>
         </div>
-      ) : provider !== Provider.KIZUNA_AI ? (
+      ) : provider !== Provider.EBURON_AI ? (
         provider === Provider.VOLCENGINE_AST2 ? (
           // Volcengine AST2 requires both APP ID and Access Token
           <div className="volcengine-st-credentials-group">
@@ -547,7 +547,8 @@ const ProviderSection: React.FC<ProviderSectionProps> = ({
               )}
             </button>
           </div>
-        )}
+        )
+      ) : null}
 
       {tutorialUrl && !dismissedTutorials.has(provider) && (
         <div className="tutorial-link">

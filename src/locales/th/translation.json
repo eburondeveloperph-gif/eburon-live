@@ -40,7 +40,7 @@
     "yourLanguage": "ภาษาของฉัน",
     "userAccount": "บัญชีผู้ใช้",
     "userAccountTooltip": "ผู้ใช้ทางเทคนิคสามารถใช้ API key ของตัวเองได้ บัญชีผู้ใช้ถูกออกแบบสำหรับการตั้งค่าที่ง่าย",
-    "signInRequired": "ใช้ API key ของคุณเอง หรือลงทะเบียนสำหรับบริการ kizuna.ai",
+    "signInRequired": "ใช้ API key ของคุณเอง หรือลงทะเบียนสำหรับบริการ eburon.ai",
     "signInDescription": "ลงทะเบียนเพื่อประสบการณ์ที่ง่าย",
     "targetLanguage": "ภาษาของอีกฝ่าย",
     "microphone": "ไมโครโฟน",
@@ -79,9 +79,9 @@
       "name": "Palabra AI",
       "description": "Specialized translation AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "Powered by kizuna.ai service"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "Powered by eburon.ai service"
     },
     "volcengine_st": {
       "name": "Volcengine การแปลเสียงพูด",
@@ -222,7 +222,7 @@
     "fetchingApiKey": "กำลังรับคีย์ API จากบัญชีของคุณ...",
     "geminiApiKey": "คีย์ API Gemini",
     "palabraApiKey": "คีย์ API Palabra",
-    "kizunaaiApiKey": "การเข้าถึง Kizuna AI",
+    "eburonaiApiKey": "การเข้าถึง Eburon AI",
     "systemPrompt": "System Prompt",
     "selectModel": "เลือกโมเดล",
     "noModelsAvailable": "ไม่มีโมเดลที่ใช้ได้",
@@ -265,7 +265,7 @@
     "changes": "มีอะไรใหม่?",
     "apiKeyManagedByBackend": "คีย์ API จัดการโดยเซิร์ฟเวอร์",
     "autoManaged": "จัดการอัตโนมัติ",
-    "kizunaApiKeyInfo": "คีย์ API นี้ถูกจัดการโดยอัตโนมัติโดยบริการเซิร์ฟเวอร์ของเรา",
+    "eburonApiKeyInfo": "คีย์ API นี้ถูกจัดการโดยอัตโนมัติโดยบริการเซิร์ฟเวอร์ของเรา",
     "webrtcVadDisabledTitle": "Server VAD ไม่พร้อมใช้งานในโหมด WebRTC",
     "webrtcVadNotice": "Server VAD ถูกปิดใช้งานในโหมด WebRTC ใน WebRTC เซิร์ฟเวอร์จะตัดเสียงอัตโนมัติเมื่อตรวจจับคำพูด ซึ่งจะขัดจังหวะการแปล",
     "switchToAdvanced": "สลับไปโหมดขั้นสูง",
@@ -391,7 +391,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -498,12 +498,12 @@
     "upgradeToPremium": "อัปเกรดเป็น Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "กรุณาเข้าสู่ระบบเพื่อใช้บริการ Kizuna AI",
+    "signInToUseEburonAI": "กรุณาเข้าสู่ระบบเพื่อใช้บริการ Eburon AI",
     "authenticationManaged": "การยืนยันตัวตนจัดการโดยอัตโนมัติ",
     "fetchingApiKey": "กำลังดึง API key...",
     "apiKeyFetched": "ได้รับ API key สำเร็จ",
     "failedToFetchApiKey": "ไม่สามารถดึง API key ได้",
-    "kizunaaiNotAvailable": "Kizuna AI ใช้งานได้เฉพาะเมื่อเข้าสู่ระบบแล้ว",
+    "eburonaiNotAvailable": "Eburon AI ใช้งานได้เฉพาะเมื่อเข้าสู่ระบบแล้ว",
     "signIn": "เข้าสู่ระบบ",
     "signUp": "สมัครสมาชิก",
     "email": "อีเมล",

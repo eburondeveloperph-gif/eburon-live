@@ -64,8 +64,8 @@ export class ClientOperations {
             created: Date.now() / 1000 // Current timestamp
           }] // PalabraAI default model
         };
-      case Provider.KIZUNA_AI:
-        // KizunaAI is OpenAI-compatible, use OpenAIClient with proxy
+      case Provider.EBURON_AI:
+        // EburonAI is OpenAI-compatible, use OpenAIClient with proxy
         // Use environment-specific backend URL
         return await OpenAIClient.validateApiKeyAndFetchModels(
           apiKey,
@@ -116,8 +116,8 @@ export class ClientOperations {
       case Provider.PALABRA_AI:
         // PalabraAI doesn't have model selection, return a default identifier
         return 'realtime-translation';
-      case Provider.KIZUNA_AI:
-        // KizunaAI uses the same model detection logic as OpenAI
+      case Provider.EBURON_AI:
+        // EburonAI uses the same model detection logic as OpenAI
         return OpenAIClient.getLatestRealtimeModel(filteredModels);
       case Provider.VOLCENGINE_ST:
         // Volcengine ST has a fixed model for speech translation

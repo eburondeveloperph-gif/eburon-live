@@ -17,7 +17,7 @@
     "autoDetect": "自动检测",
     "signIn": "登录",
     "signUp": "注册",
-    "signInRequired": "请登录以使用Kizuna AI作为您的提供商"
+    "signInRequired": "请登录以使用Eburon AI作为您的提供商"
   },
   "app": {
     "title": "Eburon",
@@ -160,7 +160,7 @@
     "fetchingApiKey": "正在从您的账户获取 API 密钥...",
     "geminiApiKey": "Gemini API 密钥",
     "palabraApiKey": "Palabra API 密钥",
-    "kizunaaiApiKey": "Kizuna AI 访问",
+    "eburonaiApiKey": "Eburon AI 访问",
     "systemPrompt": "系统提示词",
     "selectModel": "选择模型",
     "noModelsAvailable": "没有可用的模型",
@@ -203,7 +203,7 @@
     "changes": "更新内容",
     "apiKeyManagedByBackend": "后端管理的 API 密钥",
     "autoManaged": "自动管理",
-    "kizunaApiKeyInfo": "此 API 密钥由我们的后端服务自动管理。",
+    "eburonApiKeyInfo": "此 API 密钥由我们的后端服务自动管理。",
     "switchToAdvanced": "切换到高级模式",
     "switchToBasic": "切换到基础模式",
     "advancedMode": "高级",
@@ -248,7 +248,7 @@
     "yourLanguage": "我的语言",
     "userAccount": "用户账户",
     "userAccountTooltip": "对于拥有技术知识和自己API密钥的用户，无论是否登录都可以使用自己的API密钥。用户账户是为希望简化设置、无需复杂配置的新用户设计的。",
-    "signInRequired": "您可以在不登录的情况下使用自己的AI提供商和API密钥，或者注册购买使用kizuna.ai提供的API服务。",
+    "signInRequired": "您可以在不登录的情况下使用自己的AI提供商和API密钥，或者注册购买使用eburon.ai提供的API服务。",
     "signInDescription": "注册即可享受便捷体验，无需复杂配置。",
     "targetLanguage": "对方语言",
     "microphone": "麦克风",
@@ -325,9 +325,9 @@
       "name": "Palabra AI",
       "description": "专业翻译AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "由 kizuna.ai 服务提供支持"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "由 eburon.ai 服务提供支持"
     },
     "volcengine_st": {
       "name": "火山引擎语音翻译",
@@ -471,7 +471,7 @@
         },
         "account": {
           "title": "步骤 3：用户账户",
-          "content": "登录以获得简单体验，或者不登录使用您自己的API密钥。新用户可以注册kizuna.ai的API服务。"
+          "content": "登录以获得简单体验，或者不登录使用您自己的API密钥。新用户可以注册eburon.ai的API服务。"
         },
         "languages": {
           "title": "步骤 4：选择语言",
@@ -608,12 +608,12 @@
     "signUpError": "注册失败。请再试一次",
     "networkError": "网络错误。请检查您的连接",
     "unknownError": "发生意外错误。请再试一次",
-    "signInToUseKizunaAI": "请登录以使用 Kizuna AI 服务",
+    "signInToUseEburonAI": "请登录以使用 Eburon AI 服务",
     "authenticationManaged": "身份验证由系统自动管理",
     "fetchingApiKey": "正在获取 API 密钥...",
     "apiKeyFetched": "已成功获取 API 密钥",
     "failedToFetchApiKey": "获取 API 密钥失败",
-    "kizunaaiNotAvailable": "Kizuna AI 仅在登录后可用",
+    "eburonaiNotAvailable": "Eburon AI 仅在登录后可用",
     "emailVerified": "邮箱已验证",
     "emailNotVerified": "邮箱未验证。点击重新发送验证邮件",
     "verify": "验证",

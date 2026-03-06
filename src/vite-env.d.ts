@@ -4,7 +4,7 @@ interface ImportMetaEnv {
   readonly VITE_BACKEND_URL?: string;
   readonly VITE_POSTHOG_KEY?: string;
   readonly VITE_POSTHOG_HOST?: string;
-  readonly VITE_ENABLE_KIZUNA_AI?: string;
+  readonly VITE_ENABLE_EBURON_AI?: string;
   readonly VITE_ENABLE_PALABRA_AI?: string;
   readonly VITE_ENABLE_VOLCENGINE_ST?: string;
   readonly VITE_ENABLE_VOLCENGINE_AST2?: string;

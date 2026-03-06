@@ -12,7 +12,7 @@ import {
   useGeminiSettings,
   useOpenAICompatibleSettings,
   usePalabraAISettings,
-  useKizunaAISettings,
+  useEburonAISettings,
   useVolcengineSTSettings,
   useVolcengineAST2Settings,
   useLocalInferenceSettings,
@@ -24,7 +24,7 @@ import {
   useUpdateGemini,
   useUpdateOpenAICompatible,
   useUpdatePalabraAI,
-  useUpdateKizunaAI,
+  useUpdateEburonAI,
   useUpdateVolcengineST,
   useUpdateVolcengineAST2,
   useUpdateLocalInference,
@@ -73,7 +73,7 @@ const ProviderSpecificSettings: React.FC<ProviderSpecificSettingsProps> = ({
   const openAICompatibleSettings = useOpenAICompatibleSettings();
   const geminiSettings = useGeminiSettings();
   const palabraAISettings = usePalabraAISettings();
-  const kizunaAISettings = useKizunaAISettings();
+  const eburonAISettings = useEburonAISettings();
   const volcengineSTSettings = useVolcengineSTSettings();
   const volcengineAST2Settings = useVolcengineAST2Settings();
   const localInferenceSettings = useLocalInferenceSettings();
@@ -88,7 +88,7 @@ const ProviderSpecificSettings: React.FC<ProviderSpecificSettingsProps> = ({
   const updateOpenAICompatibleSettings = useUpdateOpenAICompatible();
   const updateGeminiSettings = useUpdateGemini();
   const updatePalabraAISettings = useUpdatePalabraAI();
-  const updateKizunaAISettings = useUpdateKizunaAI();
+  const updateEburonAISettings = useUpdateEburonAI();
   const updateVolcengineSTSettings = useUpdateVolcengineST();
   const updateVolcengineAST2Settings = useUpdateVolcengineAST2();
   const updateLocalInferenceSettings = useUpdateLocalInference();
@@ -105,8 +105,8 @@ const ProviderSpecificSettings: React.FC<ProviderSpecificSettingsProps> = ({
       updateOpenAISettings({ [key]: value });
     } else if (provider === Provider.OPENAI_COMPATIBLE) {
       updateOpenAICompatibleSettings({ [key]: value });
-    } else if (provider === Provider.KIZUNA_AI) {
-      updateKizunaAISettings({ [key]: value });
+    } else if (provider === Provider.EBURON_AI) {
+      updateEburonAISettings({ [key]: value });
     } else if (provider === Provider.GEMINI) {
       updateGeminiSettings({ [key]: value });
     } else if (provider === Provider.PALABRA_AI) {
@@ -133,8 +133,8 @@ const ProviderSpecificSettings: React.FC<ProviderSpecificSettingsProps> = ({
       return openAISettings;
     } else if (provider === Provider.OPENAI_COMPATIBLE) {
       return openAICompatibleSettings;
-    } else if (provider === Provider.KIZUNA_AI) {
-      return kizunaAISettings;
+    } else if (provider === Provider.EBURON_AI) {
+      return eburonAISettings;
     }
     return null;
   };
@@ -145,8 +145,8 @@ const ProviderSpecificSettings: React.FC<ProviderSpecificSettingsProps> = ({
       updateOpenAISettings(updates);
     } else if (provider === Provider.OPENAI_COMPATIBLE) {
       updateOpenAICompatibleSettings(updates);
-    } else if (provider === Provider.KIZUNA_AI) {
-      updateKizunaAISettings(updates);
+    } else if (provider === Provider.EBURON_AI) {
+      updateEburonAISettings(updates);
     }
   };
 

@@ -59,7 +59,7 @@ All analytics are:
 ## Verification
 
 Our extension is completely open-source, and you can verify:
-1. **Source code**: https://github.com/kizuna-ai-lab/Eburon/
+1. **Source code**: https://github.com/eburondeveloperph-gif/eburon-live/
 2. **Build process**: GitHub Actions workflow that generates the exact zip file we submit
 3. **Package contents**: All PostHog code is bundled within the extension, no external dependencies
 4. **Migration commit**: The exact changes made to migrate from posthog-js to posthog-js-lite
@@ -94,6 +94,6 @@ Best regards,
 Eburon Development Team
 
 ---
-**Open Source Repository**: https://github.com/kizuna-ai-lab/Eburon/  
+**Open Source Repository**: https://github.com/eburondeveloperph-gif/eburon-live/  
 **Extension Version**: 0.5.6  
 **Item ID**: ppmihnhelgfpjomhjhpecobloelicnak 

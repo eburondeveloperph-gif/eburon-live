@@ -17,7 +17,7 @@
     "autoDetect": "Auto Detect",
     "signIn": "Sign In",
     "signUp": "Sign Up",
-    "signInRequired": "Please sign in to use Kizuna AI as your provider"
+    "signInRequired": "Please sign in to use Eburon AI as your provider"
   },
   "app": {
     "title": "Eburon",
@@ -39,7 +39,7 @@
     "openaiApiKey": "OpenAI API Key",
     "geminiApiKey": "Gemini API Key",
     "palabraApiKey": "Palabra API Key",
-    "kizunaaiApiKey": "Kizuna AI Access",
+    "eburonaiApiKey": "Eburon AI Access",
     "clientId": "Client ID",
     "clientSecret": "Client Secret",
     "systemPrompt": "System Prompt",
@@ -161,7 +161,7 @@
     "basicMode": "Basic",
     "apiKeyManagedByBackend": "Backend-managed API key",
     "autoManaged": "Auto-managed",
-    "kizunaApiKeyInfo": "This API key is automatically managed by our backend service.",
+    "eburonApiKeyInfo": "This API key is automatically managed by our backend service.",
     "providerTooltip": "Choose your AI translation service. Each service has different features, voices, and pricing. OpenAI offers the most features, while Gemini provides a good free tier. Local (Offline) mode is completely free — no API key or internet required.",
     "apiKeyTooltip": "Your API key is like a password for the AI service. Get it from the provider's website and keep it safe. Never share it with others.",
     "clientIdTooltip": "Your PalabraAI account ID. This identifies your account. Get it from your PalabraAI dashboard.",
@@ -242,7 +242,7 @@
     "audioSettingsDesc": "Configure your microphone and speakers in the Audio panel",
     "apiKeyManagedByBackend": "Backend-managed API key",
     "autoManaged": "Auto-managed",
-    "kizunaApiKeyInfo": "This API key is automatically managed by our backend service."
+    "eburonApiKeyInfo": "This API key is automatically managed by our backend service."
   },
   "audioPanel": {
     "title": "Audio Settings",
@@ -287,12 +287,12 @@
     "refreshSystemAudioSources": "Refresh device list"
   },
   "auth": {
-    "signInToUseKizunaAI": "Please sign in to use Kizuna AI service",
+    "signInToUseEburonAI": "Please sign in to use Eburon AI service",
     "authenticationManaged": "Authentication managed automatically",
     "fetchingApiKey": "Fetching API key...",
     "apiKeyFetched": "API key obtained successfully",
     "failedToFetchApiKey": "Failed to get API key",
-    "kizunaaiNotAvailable": "Kizuna AI is only available when signed in",
+    "eburonaiNotAvailable": "Eburon AI is only available when signed in",
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "email": "Email",
@@ -356,7 +356,7 @@
     "userAccount": "User Account",
     "userAccountTooltip": "For users with technical knowledge and their own API keys, you can use your own API key whether logged in or not. User Account is designed for new users who prefer a simplified setup without complex configuration.",
     "signInDescription": "Sign up for a convenient experience without complex configuration.",
-    "signInRequired": "You can use your own AI provider and API key without logging in, or sign up to purchase and use kizuna.ai's API service.",
+    "signInRequired": "You can use your own AI provider and API key without logging in, or sign up to purchase and use eburon.ai's API service.",
     "targetLanguage": "Other's Language",
     "microphone": "Microphone",
     "microphoneDesc": "Select the microphone to capture your speech. Speak your language into this microphone, and Eburon will translate everything it hears in real-time.",
@@ -395,9 +395,9 @@
       "name": "Palabra AI",
       "description": "Specialized translation AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "Powered by kizuna.ai service"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "Powered by eburon.ai service"
     },
     "volcengine_st": {
       "name": "Volcengine Speech Translate",
@@ -565,7 +565,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",

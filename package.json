@@ -8,7 +8,7 @@
   "description": "Live speech translation application using OpenAI and Google Gemini APIs",
   "author": {
     "name": "Kizuna AI Lab",
-    "email": "contact@kizuna.ai"
+    "email": "contact@eburon.ai"
   },
   "dependencies": {
     "@capacitor/android": "^8.2.0",

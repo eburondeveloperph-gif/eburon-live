@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.kizunaai.eburon',
+  appId: 'com.eburonai.eburon',
   appName: 'Eburon',
   webDir: 'build',
   bundledWebRuntime: false,

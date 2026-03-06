@@ -40,7 +40,7 @@
     "yourLanguage": "Моя мова",
     "userAccount": "Обліковий запис користувача",
     "userAccountTooltip": "Технічні користувачі можуть використовувати власні API-ключі. Обліковий запис користувача призначений для спрощеного налаштування.",
-    "signInRequired": "Використовуйте власний API-ключ або зареєструйтеся для сервісу kizuna.ai.",
+    "signInRequired": "Використовуйте власний API-ключ або зареєструйтеся для сервісу eburon.ai.",
     "signInDescription": "Зареєструйтеся для спрощеного досвіду.",
     "targetLanguage": "Мова співрозмовника",
     "microphone": "Мікрофон",
@@ -79,9 +79,9 @@
       "name": "Palabra AI",
       "description": "Specialized translation AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "Powered by kizuna.ai service"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "Powered by eburon.ai service"
     },
     "volcengine_st": {
       "name": "Volcengine Голосовий Переклад",
@@ -200,7 +200,7 @@
     "fetchingApiKey": "Отримання API-ключа з вашого облікового запису...",
     "geminiApiKey": "API-ключ Gemini",
     "palabraApiKey": "API-ключ Palabra",
-    "kizunaaiApiKey": "Доступ Kizuna AI",
+    "eburonaiApiKey": "Доступ Eburon AI",
     "systemPrompt": "Системний промпт",
     "selectModel": "Виберіть модель",
     "noModelsAvailable": "Немає доступних моделей",
@@ -243,7 +243,7 @@
     "changes": "Що нового?",
     "apiKeyManagedByBackend": "API-ключ керується сервером",
     "autoManaged": "Автокерування",
-    "kizunaApiKeyInfo": "Цей API-ключ автоматично керується нашим серверним сервісом.",
+    "eburonApiKeyInfo": "Цей API-ключ автоматично керується нашим серверним сервісом.",
     "webrtcVadDisabledTitle": "Серверний VAD недоступний у режимі WebRTC",
     "webrtcVadNotice": "Серверний VAD вимкнено в режимі WebRTC. У WebRTC сервер автоматично обрізає аудіо при виявленні мовлення, що перериває переклади.",
     "switchToAdvanced": "Перемкнути на розширений режим",
@@ -384,7 +384,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -498,12 +498,12 @@
     "upgradeToPremium": "Оновити до Premium"
   },
   "auth": {
-    "signInToUseKizunaAI": "Увійдіть, щоб використовувати сервіс Kizuna AI",
+    "signInToUseEburonAI": "Увійдіть, щоб використовувати сервіс Eburon AI",
     "authenticationManaged": "Автентифікація керується автоматично",
     "fetchingApiKey": "Отримання API-ключа...",
     "apiKeyFetched": "API-ключ успішно отримано",
     "failedToFetchApiKey": "Не вдалося отримати API-ключ",
-    "kizunaaiNotAvailable": "Kizuna AI доступний лише після входу в систему",
+    "eburonaiNotAvailable": "Eburon AI доступний лише після входу в систему",
     "signIn": "Увійти",
     "signUp": "Реєстрація",
     "email": "Ел. пошта",

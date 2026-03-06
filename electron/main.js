@@ -85,7 +85,7 @@ function createApplicationMenu() {
               type: 'info',
               title: `About ${app.getName()}`,
               message: 'Eburon - Real-time AI Translation',
-              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2024 Kizuna AI Lab`,
+              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2024 Eburon AI`,
               buttons: ['OK'],
               icon: path.join(__dirname, '../assets/icon.png')
             });
@@ -182,7 +182,7 @@ function createApplicationMenu() {
               type: 'info',
               title: `About ${app.getName()}`,
               message: 'Eburon - Real-time AI Translation',
-              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2024 Kizuna AI Lab`,
+              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2024 Eburon AI`,
               buttons: ['OK'],
               icon: path.join(__dirname, '../assets/icon.png')
             });
@@ -192,19 +192,19 @@ function createApplicationMenu() {
         {
           label: 'Official Website',
           click: async () => {
-            await shell.openExternal('https://Eburon.kizuna.ai/');
+            await shell.openExternal('https://app.eburon.ai/');
           }
         },
         {
           label: 'Source Code',
           click: async () => {
-            await shell.openExternal('https://github.com/kizuna-ai-lab/Eburon');
+            await shell.openExternal('https://github.com/eburondeveloperph-gif/eburon-live');
           }
         },
         {
           label: 'Report Issue',
           click: async () => {
-            await shell.openExternal('https://github.com/kizuna-ai-lab/Eburon/issues');
+            await shell.openExternal('https://github.com/eburondeveloperph-gif/eburon-live/issues');
           }
         }
       ]

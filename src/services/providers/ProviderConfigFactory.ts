@@ -3,12 +3,12 @@ import { OpenAIProviderConfig } from './OpenAIProviderConfig';
 import { GeminiProviderConfig } from './GeminiProviderConfig';
 import { OpenAICompatibleProviderConfig } from './OpenAICompatibleProviderConfig';
 import { PalabraAIProviderConfig } from './PalabraAIProviderConfig';
-import { KizunaAIProviderConfig } from './KizunaAIProviderConfig';
+import { EburonAIProviderConfig } from './EburonAIProviderConfig';
 import { VolcengineSTProviderConfig } from './VolcengineSTProviderConfig';
 import { VolcengineAST2ProviderConfig } from './VolcengineAST2ProviderConfig';
 import { LocalInferenceProviderConfig } from './LocalInferenceProviderConfig';
 import { Provider, ProviderType } from '../../types/Provider';
-import { isKizunaAIEnabled, isPalabraAIEnabled, isVolcengineSTEnabled, isVolcengineAST2Enabled, isElectron, isExtension } from '../../utils/environment';
+import { isEburonAIEnabled, isPalabraAIEnabled, isVolcengineSTEnabled, isVolcengineAST2Enabled, isElectron, isExtension } from '../../utils/environment';
 
 interface ProviderConfigInstance {
   getConfig(): ProviderConfig;
@@ -27,9 +27,9 @@ export class ProviderConfigFactory {
       ProviderConfigFactory.configs.set(Provider.PALABRA_AI, new PalabraAIProviderConfig());
     }
 
-    // Only register Kizuna AI if the feature flag is enabled
-    if (isKizunaAIEnabled()) {
-      ProviderConfigFactory.configs.set(Provider.KIZUNA_AI, new KizunaAIProviderConfig());
+    // Only register Eburon AI if the feature flag is enabled
+    if (isEburonAIEnabled()) {
+      ProviderConfigFactory.configs.set(Provider.EBURON_AI, new EburonAIProviderConfig());
     }
 
     // Only register OpenAI Compatible provider in Electron environment

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # =============================================================================
 # build-all.sh — Build Eburon for all platforms
@@ -23,7 +23,7 @@
 set -e
 
 VERSION=$(node -p "require('./package.json').version")
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Colors
@@ -33,10 +33,10 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-log()   { echo -e "${BLUE}[BUILD]${NC} $*"; }
-ok()    { echo -e "${GREEN}[  OK ]${NC} $*"; }
-warn()  { echo -e "${YELLOW}[WARN ]${NC} $*"; }
-fail()  { echo -e "${RED}[FAIL ]${NC} $*"; }
+log()   { echo "${BLUE}[BUILD]${NC} $*"; }
+ok()    { echo "${GREEN}[  OK ]${NC} $*"; }
+warn()  { echo "${YELLOW}[WARN ]${NC} $*"; }
+fail()  { echo "${RED}[FAIL ]${NC} $*"; }
 
 # Determine which targets to build
 TARGETS=("$@")
@@ -44,8 +44,21 @@ if [ ${#TARGETS[@]} -eq 0 ]; then
     TARGETS=(mac debian windows apk)
 fi
 
-# Track results
-declare -A RESULTS
+# Track results (simple variables instead of associative array)
+RESULT_mac=""
+RESULT_debian=""
+RESULT_windows=""
+RESULT_apk=""
+
+set_result() {
+    local key="$1" val="$2"
+    eval "RESULT_${key}=\"${val}\""
+}
+
+get_result() {
+    local key="$1"
+    eval "echo \"\$RESULT_${key}\""
+}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Shared: Build React web app (needed by all targets)
@@ -73,7 +86,7 @@ build_mac() {
 
     if [[ "$(uname)" != "Darwin" ]]; then
         fail "macOS PKG can only be built on macOS"
-        RESULTS[mac]="SKIPPED (not macOS)"
+        set_result mac "SKIPPED (not macOS)"
         return 1
     fi
 
@@ -84,10 +97,10 @@ build_mac() {
     PKG_FILE=$(find out/make -name "*.pkg" -type f 2>/dev/null | head -1)
     if [ -n "$PKG_FILE" ]; then
         ok "macOS PKG: $PKG_FILE ($(du -h "$PKG_FILE" | cut -f1))"
-        RESULTS[mac]="$PKG_FILE"
+        set_result mac "$PKG_FILE"
     else
         fail "macOS PKG build failed"
-        RESULTS[mac]="FAILED"
+        set_result mac "FAILED"
         return 1
     fi
 }
@@ -107,7 +120,7 @@ build_debian() {
             brew install dpkg
         else
             fail "dpkg not found. Install it: sudo apt-get install dpkg"
-            RESULTS[debian]="FAILED (missing dpkg)"
+            set_result debian "FAILED (missing dpkg)"
             return 1
         fi
     fi
@@ -121,10 +134,10 @@ build_debian() {
     DEB_FILE=$(find out/make -name "*.deb" -type f 2>/dev/null | head -1)
     if [ -n "$DEB_FILE" ]; then
         ok "Debian .deb: $DEB_FILE ($(du -h "$DEB_FILE" | cut -f1))"
-        RESULTS[debian]="$DEB_FILE"
+        set_result debian "$DEB_FILE"
     else
         fail "Debian .deb build failed"
-        RESULTS[debian]="FAILED"
+        set_result debian "FAILED"
         return 1
     fi
 }
@@ -155,10 +168,10 @@ build_windows() {
     EXE_FILE=$(find out/make -name "*.exe" -type f 2>/dev/null | head -1)
     if [ -n "$EXE_FILE" ]; then
         ok "Windows .exe: $EXE_FILE ($(du -h "$EXE_FILE" | cut -f1))"
-        RESULTS[windows]="$EXE_FILE"
+        set_result windows "$EXE_FILE"
     else
         fail "Windows .exe build failed"
-        RESULTS[windows]="FAILED"
+        set_result windows "FAILED"
         return 1
     fi
 }
@@ -174,7 +187,7 @@ build_apk() {
     # Check for Java
     if ! command -v java &>/dev/null; then
         fail "Java not found. Install JDK 17+: brew install openjdk@17"
-        RESULTS[apk]="FAILED (missing Java)"
+        set_result apk "FAILED (missing Java)"
         return 1
     fi
 
@@ -211,7 +224,7 @@ build_apk() {
             log "Auto-detected Android SDK: $ANDROID_HOME"
         else
             fail "Android SDK not found. Set ANDROID_HOME or install Android Studio."
-            RESULTS[apk]="FAILED (missing Android SDK)"
+            set_result apk "FAILED (missing Android SDK)"
             return 1
         fi
     fi
@@ -232,10 +245,10 @@ build_apk() {
     APK_FILE=$(find android/app/build/outputs/apk -name "*.apk" -type f 2>/dev/null | head -1)
     if [ -n "$APK_FILE" ]; then
         ok "Android APK: $APK_FILE ($(du -h "$APK_FILE" | cut -f1))"
-        RESULTS[apk]="$APK_FILE"
+        set_result apk "$APK_FILE"
     else
         fail "Android APK build failed"
-        RESULTS[apk]="FAILED"
+        set_result apk "FAILED"
         return 1
     fi
 }
@@ -300,7 +313,7 @@ for TARGET in "${TARGETS[@]}"; do
         *) KEY="$TARGET" ;;
     esac
 
-    RESULT="${RESULTS[$KEY]}"
+    RESULT="$(get_result $KEY)"
     if [ -z "$RESULT" ]; then
         fail "  $TARGET: NOT ATTEMPTED"
     elif [[ "$RESULT" == FAILED* ]] || [[ "$RESULT" == SKIPPED* ]]; then

@@ -39,7 +39,7 @@ Test cases are defined in JSON format following the schema in `schemas/test-case
 
 ### Key Components
 
-- **provider**: AI provider to test (openai, gemini, palabra_ai, kizuna_ai, openai_compatible)
+- **provider**: AI provider to test (openai, gemini, palabra_ai, eburon_ai, openai_compatible)
 - **config**: Model configuration including system instruction, temperature, voice settings
 - **inputs**: List of test inputs (audio files or text)
 - **evaluation**: LLM-as-Judge configuration for quality assessment

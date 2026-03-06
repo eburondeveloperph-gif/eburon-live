@@ -1,7 +1,7 @@
 /**
  * Model Storage — IndexedDB wrapper for persisting model files as Blobs.
  *
- * Database: 'sokuji-models', version 1
+ * Database: 'eburon-models', version 1
  *   Store 'files':    key = '{modelId}/{filename}' → Blob
  *   Store 'metadata': key = modelId → ModelMetadata
  */
@@ -19,7 +19,7 @@ export interface ModelMetadata {
   version: string;
 }
 
-interface SokujiModelsDB {
+interface EburonModelsDB {
   files: {
     key: string;
     value: Blob;
@@ -32,14 +32,14 @@ interface SokujiModelsDB {
 
 // ─── Database ────────────────────────────────────────────────────────────────
 
-const DB_NAME = 'sokuji-models';
+const DB_NAME = 'eburon-models';
 const DB_VERSION = 1;
 
-let dbPromise: Promise<IDBPDatabase<SokujiModelsDB>> | null = null;
+let dbPromise: Promise<IDBPDatabase<EburonModelsDB>> | null = null;
 
-function getDb(): Promise<IDBPDatabase<SokujiModelsDB>> {
+function getDb(): Promise<IDBPDatabase<EburonModelsDB>> {
   if (!dbPromise) {
-    dbPromise = openDB<SokujiModelsDB>(DB_NAME, DB_VERSION, {
+    dbPromise = openDB<EburonModelsDB>(DB_NAME, DB_VERSION, {
       upgrade(db) {
         if (!db.objectStoreNames.contains('files')) {
           db.createObjectStore('files');

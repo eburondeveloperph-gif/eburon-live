@@ -3,7 +3,7 @@
  */
 
 // Provider types (aligned with src/types/Provider.ts)
-export type TestProvider = 'openai' | 'gemini' | 'palabra_ai' | 'kizuna_ai' | 'openai_compatible';
+export type TestProvider = 'openai' | 'gemini' | 'palabra_ai' | 'eburon_ai' | 'openai_compatible';
 
 // Test case status
 export type TestStatus = 'passed' | 'failed' | 'error' | 'skipped';
@@ -245,7 +245,7 @@ export interface RunnerConfig {
     openai?: string;
     gemini?: string;
     palabraai?: string;
-    kizunaai?: string;
+    eburonai?: string;
   };
   judge: {
     provider: string;

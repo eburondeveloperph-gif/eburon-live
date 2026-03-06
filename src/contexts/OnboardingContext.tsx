@@ -70,7 +70,7 @@ const createBasicOnboardingSteps = (t: any): OnboardingStep[] => [
   },
   {
     target: '#user-account-section',
-    content: t('onboarding.basic.steps.account.content', 'Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai\'s API service.'),
+    content: t('onboarding.basic.steps.account.content', 'Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai\'s API service.'),
     title: t('onboarding.basic.steps.account.title', 'Step 3: User Account'),
     placement: 'left',
   },

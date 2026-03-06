@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://Eburon.kizuna.ai/schemas/test-case.schema.json",
+  "$id": "https://app.eburon.ai/schemas/test-case.schema.json",
   "title": "Evaluation Test Case",
   "description": "Schema for defining evaluation test cases for Realtime API translation quality assessment",
   "type": "object",
@@ -29,7 +29,7 @@
     "provider": {
       "type": "string",
       "description": "AI provider to use for the test",
-      "enum": ["openai", "gemini", "palabra_ai", "kizuna_ai", "openai_compatible"]
+      "enum": ["openai", "gemini", "palabra_ai", "eburon_ai", "openai_compatible"]
     },
     "config": {
       "type": "object",

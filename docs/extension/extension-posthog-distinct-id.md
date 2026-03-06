@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 The uninstall URL will look like:
 ```
-https://kizuna-ai-lab.github.io/Eburon/uninstall_feedback.html?distinct_id=abc123xyz
+https://eburondeveloperph-gif.github.io/Eburon/uninstall_feedback.html?distinct_id=abc123xyz
 ```
 
 ## Benefits

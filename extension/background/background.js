@@ -4,7 +4,7 @@
 /* global chrome */
 
 // Uninstall feedback URL - hosted on backend
-const UNINSTALL_FEEDBACK_BASE_URL = 'https://Eburon.kizuna.ai/uninstall-feedback';
+const UNINSTALL_FEEDBACK_BASE_URL = 'https://app.eburon.ai/uninstall-feedback';
 
 // Default configuration values
 const DEFAULT_CONFIG = {

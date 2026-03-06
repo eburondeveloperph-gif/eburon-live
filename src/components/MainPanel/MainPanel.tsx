@@ -8,7 +8,7 @@ import {
   useGeminiSettings,
   useOpenAICompatibleSettings,
   usePalabraAISettings,
-  useKizunaAISettings,
+  useEburonAISettings,
   useVolcengineSTSettings,
   useVolcengineAST2Settings,
   useLocalInferenceSettings,
@@ -88,7 +88,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
   const openAICompatibleSettings = useOpenAICompatibleSettings();
   const geminiSettings = useGeminiSettings();
   const palabraAISettings = usePalabraAISettings();
-  const kizunaAISettings = useKizunaAISettings();
+  const eburonAISettings = useEburonAISettings();
   const volcengineSTSettings = useVolcengineSTSettings();
   const volcengineAST2Settings = useVolcengineAST2Settings();
   const localInferenceSettings = useLocalInferenceSettings();
@@ -143,7 +143,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
     return provider === Provider.OPENAI ||
            provider === Provider.GEMINI ||
            provider === Provider.OPENAI_COMPATIBLE ||
-           provider === Provider.KIZUNA_AI ||
+           provider === Provider.EBURON_AI ||
            provider === Provider.LOCAL_INFERENCE;
   }, [provider]);
 
@@ -805,8 +805,8 @@ const MainPanel: React.FC<MainPanelProps> = () => {
         case Provider.OPENAI_COMPATIBLE:
           apiKey = openAICompatibleSettings.apiKey;
           break;
-        case Provider.KIZUNA_AI:
-          apiKey = kizunaAISettings.apiKey || '';
+        case Provider.EBURON_AI:
+          apiKey = eburonAISettings.apiKey || '';
           break;
         case Provider.GEMINI:
           apiKey = geminiSettings.apiKey;
@@ -854,7 +854,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
         const settings =
           provider === Provider.OPENAI ? openAISettings :
           provider === Provider.OPENAI_COMPATIBLE ? openAICompatibleSettings :
-          provider === Provider.KIZUNA_AI ? kizunaAISettings :
+          provider === Provider.EBURON_AI ? eburonAISettings :
           null;
         setCanPushToTalk(settings ? settings.turnDetectionMode === 'Disabled' : false);
       } else if (provider === Provider.VOLCENGINE_AST2) {
@@ -978,7 +978,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
         const settings =
           provider === Provider.OPENAI ? openAISettings :
           provider === Provider.OPENAI_COMPATIBLE ? openAICompatibleSettings :
-          provider === Provider.KIZUNA_AI ? kizunaAISettings :
+          provider === Provider.EBURON_AI ? eburonAISettings :
           null;
         turnDetectionDisabled = settings ? settings.turnDetectionMode === 'Disabled' : false;
       } else if (provider === Provider.VOLCENGINE_AST2) {
@@ -1120,7 +1120,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
     geminiSettings,
     openAICompatibleSettings,
     palabraAISettings,
-    kizunaAISettings,
+    eburonAISettings,
     volcengineSTSettings,
     volcengineAST2Settings,
     localInferenceSettings,
@@ -1291,7 +1291,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
     }
 
     // If AI is responding (OpenAI), queue the message for later
-    if (isAIResponding && (provider === Provider.OPENAI || provider === Provider.OPENAI_COMPATIBLE || provider === Provider.KIZUNA_AI)) {
+    if (isAIResponding && (provider === Provider.OPENAI || provider === Provider.OPENAI_COMPATIBLE || provider === Provider.EBURON_AI)) {
       console.log('[MainPanel] AI is responding, queuing text message');
       pendingTextRef.current = text;
       return;
@@ -1868,7 +1868,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
             const settings =
               provider === Provider.OPENAI ? openAISettings :
               provider === Provider.OPENAI_COMPATIBLE ? openAICompatibleSettings :
-              provider === Provider.KIZUNA_AI ? kizunaAISettings :
+              provider === Provider.EBURON_AI ? eburonAISettings :
               null;
             turnDetectionDisabled = settings ? settings.turnDetectionMode === 'Disabled' : false;
           } else if (provider === Provider.VOLCENGINE_AST2) {
@@ -1901,7 +1901,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
     };
 
     updateRecordingState();
-  }, [isInputDeviceOn, isSessionActive, provider, openAISettings.turnDetectionMode, openAICompatibleSettings.turnDetectionMode, kizunaAISettings.turnDetectionMode, volcengineAST2Settings.turnDetectionMode, localInferenceSettings.turnDetectionMode, selectedInputDevice?.deviceId]);
+  }, [isInputDeviceOn, isSessionActive, provider, openAISettings.turnDetectionMode, openAICompatibleSettings.turnDetectionMode, eburonAISettings.turnDetectionMode, volcengineAST2Settings.turnDetectionMode, localInferenceSettings.turnDetectionMode, selectedInputDevice?.deviceId]);
 
   /**
    * Watch for changes to selectedMonitorDevice or isMonitorDeviceOn 

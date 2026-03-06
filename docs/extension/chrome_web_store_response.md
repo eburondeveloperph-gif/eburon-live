@@ -16,7 +16,7 @@ I would like to respectfully address the violation regarding "Including remotely
 - The library is installed via npm (`"posthog-js": "1.167.0"`) and bundled into our extension during the build process
 
 ### 2. Code Evidence
-You can verify this in our open-source repository at https://github.com/kizuna-ai-lab/Eburon/
+You can verify this in our open-source repository at https://github.com/eburondeveloperph-gif/eburon-live/
 
 Key files showing our compliant implementation:
 - `shared/index.tsx` (line 3): `import posthog from 'posthog-js/dist/module.full.no-external';`
@@ -66,7 +66,7 @@ All analytics are:
 ## Verification
 
 Our extension is completely open-source, and you can verify:
-1. **Source code**: https://github.com/kizuna-ai-lab/Eburon/
+1. **Source code**: https://github.com/eburondeveloperph-gif/eburon-live/
 2. **Build process**: GitHub Actions workflow that generates the exact zip file we submit
 3. **Package contents**: All PostHog code is bundled within the extension, no external dependencies
 
@@ -90,6 +90,6 @@ Best regards,
 Eburon Development Team
 
 ---
-**Open Source Repository**: https://github.com/kizuna-ai-lab/Eburon/  
+**Open Source Repository**: https://github.com/eburondeveloperph-gif/eburon-live/  
 **Extension Version**: 0.5.6  
 **Item ID**: ppmihnhelgfpjomhjhpecobloelicnak 

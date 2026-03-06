@@ -40,7 +40,7 @@
     "yourLanguage": "నా భాష",
     "userAccount": "వినియోగదారు ఖాతా",
     "userAccountTooltip": "తకనీకీ వినియోగదారులు వారు స్వంత API కీలను ఉపయోగించవచ్చు. వినియోగదారు ఖాతా సరళీకృత సెటప్కోసం కోసం ఏర్పాటు చేయబడింది.",
-    "signInRequired": "మీరు సైన్ ఇన్ లేకుండా మీ స్వంత AI ప్రదాత మరియు API కీను ఉపయోగించవచ్చు, లేదా kizuna.ai సేవకోసం పందడానికి రజిస్టర్ అవవెచ్చు.",
+    "signInRequired": "మీరు సైన్ ఇన్ లేకుండా మీ స్వంత AI ప్రదాత మరియు API కీను ఉపయోగించవచ్చు, లేదా eburon.ai సేవకోసం పందడానికి రజిస్టర్ అవవెచ్చు.",
     "signInDescription": "కటినమైన అనుభవం కోసం రజిస్టర్ అవవి.",
     "targetLanguage": "ఇతరుల భాష",
     "microphone": "మైక్రోఫోన్",
@@ -79,9 +79,9 @@
       "name": "Palabra AI",
       "description": "Specialized translation AI"
     },
-    "kizunaai": {
-      "name": "Kizuna AI",
-      "description": "Powered by kizuna.ai service"
+    "eburonai": {
+      "name": "Eburon AI",
+      "description": "Powered by eburon.ai service"
     },
     "volcengine_st": {
       "name": "Volcengine స్పీచ్ ట్రాన్స్‌లేట్",
@@ -205,7 +205,7 @@
     "fetchingApiKey": "మీ ఖాతా నుండి API కీ పొందబడుతోంది...",
     "geminiApiKey": "Gemini API కీ",
     "palabraApiKey": "Palabra API కీ",
-    "kizunaaiApiKey": "Kizuna AI యాక్సెస్",
+    "eburonaiApiKey": "Eburon AI యాక్సెస్",
     "systemPrompt": "సిస్టమ్ ప్రాంప్ట్",
     "selectModel": "మోడల్‌ను ఎంచుకోండి",
     "noModelsAvailable": "మోడల్‌లు అందుబాటులో లేవు",
@@ -248,7 +248,7 @@
     "changes": "కొత్తవి",
     "apiKeyManagedByBackend": "బ్యాకెండ్ నిర్వహించే API కీ",
     "autoManaged": "స్వయంచాలకంగా నిర్వహించబడుతుంది",
-    "kizunaApiKeyInfo": "ఈ API కీ మా బ్యాకెండ్ సేవ ద్వారా స్వయంచాలకంగా నిర్వహించబడుతుంది.",
+    "eburonApiKeyInfo": "ఈ API కీ మా బ్యాకెండ్ సేవ ద్వారా స్వయంచాలకంగా నిర్వహించబడుతుంది.",
     "webrtcVadDisabledTitle": "WebRTC మోడ్‌లో సర్వర్ VAD అందుబాటులో లేదు",
     "webrtcVadNotice": "WebRTC మోడ్‌లో సర్వర్ VAD నిలిపివేయబడింది. WebRTC‌లో, సర్వర్ మాటను గుర్తించినప్పుడు ఆడియోను స్వయంచాలకంగా కత్తిరిస్తుంది, ఇది అనువాదాలను అంతరాయం చేస్తుంది.",
     "switchToAdvanced": "అధునాతన మోడ్‌కు మారండి",
@@ -384,7 +384,7 @@
         },
         "account": {
           "title": "Step 3: User Account",
-          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for kizuna.ai's API service."
+          "content": "Sign in for a simple experience, or use your own API key without logging in. New users can sign up for eburon.ai's API service."
         },
         "languages": {
           "title": "Step 4: Choose Languages",
@@ -519,12 +519,12 @@
     "signUpError": "సైన్ అప్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి",
     "networkError": "నెట్‌వర్క్ లోపం. దయచేసి మీ కనెక్షన్‌ను తనిఖీ చేయండి",
     "unknownError": "అనుకోని లోపం సంభవించింది. దయచేసి మళ్ళీ ప్రయత్నించండి",
-    "signInToUseKizunaAI": "Kizuna AI సేవను ఉపయోగించడానికి దయచేసి సైన్ ఇన్ చేయండి",
+    "signInToUseEburonAI": "Eburon AI సేవను ఉపయోగించడానికి దయచేసి సైన్ ఇన్ చేయండి",
     "authenticationManaged": "ప్రామాణీకరణ స్వయంచాలకంగా నిర్వహించబడుతుంది",
     "fetchingApiKey": "API కీ పొందుతోంది...",
     "apiKeyFetched": "API కీ విజయవంతంగా పొందబడింది",
     "failedToFetchApiKey": "API కీ పొందడంలో విఫలమైంది",
-    "kizunaaiNotAvailable": "Kizuna AI సైన్ ఇన్ అయినప్పుడు మాత్రమే అందుబాటులో ఉంటుంది",
+    "eburonaiNotAvailable": "Eburon AI సైన్ ఇన్ అయినప్పుడు మాత్రమే అందుబాటులో ఉంటుంది",
     "emailVerified": "ఇమెయిల్ ధృవీకరించబడింది",
     "emailNotVerified": "ఇమెయిల్ ధృవీకరించబడలేదు. ధృవీకరణ ఇమెయిల్‌ను మళ్ళీ పంపడానికి క్లిక్ చేయండి",
     "verify": "ధృవీకరించు",

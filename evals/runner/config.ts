@@ -60,7 +60,7 @@ export function loadConfig(options: { verbose?: boolean } = {}): RunnerConfig {
       openai: process.env.OPENAI_API_KEY,
       gemini: process.env.GEMINI_API_KEY,
       palabraai: process.env.PALABRA_API_KEY,
-      kizunaai: process.env.KIZUNA_API_KEY,
+      eburonai: process.env.KIZUNA_API_KEY,
     },
     judge: {
       provider: process.env.JUDGE_PROVIDER || 'openai',
@@ -107,8 +107,8 @@ export function getApiKeyForProvider(config: RunnerConfig, provider: string): st
     gemini: 'gemini',
     palabra_ai: 'palabraai',
     palabraai: 'palabraai',
-    kizuna_ai: 'kizunaai',
-    kizunaai: 'kizunaai',
+    eburon_ai: 'eburonai',
+    eburonai: 'eburonai',
     openai_compatible: 'openai', // Use OpenAI key for compatible APIs
   };
 
