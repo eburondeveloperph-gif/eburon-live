@@ -2274,7 +2274,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
         <div className="conversation-content" data-conversation-content>
           {combinedItems.length > 0 ? (
             combinedItems.map((item) => (
-              <div key={item.id} className={`conversation-item ${item.role} ${item.source === 'participant' ? 'participant-source' : 'speaker-source'} ${item.type === 'error' ? 'error' : ''} ${playingItemId === item.id ? 'playing' : ''}`} style={{ position: 'relative' }}>
+              <div key={item.id} className={`conversation-item ${item.role} ${item.source === 'participant' ? 'participant-source' : 'speaker-source'} ${item.type === 'error' ? 'error' : ''} ${playingItemId === item.id ? 'playing' : ''}`}>
                 <div className="conversation-item-role">
                   {item.type === 'error' ? (
                     <>
@@ -2295,6 +2295,7 @@ const MainPanel: React.FC<MainPanelProps> = () => {
                       className={`inline-play-button ${playingItemId === item.id ? 'playing' : ''}`}
                       onClick={() => handlePlayAudio(item)}
                       disabled={playingItemId !== null}
+                      title="Play audio"
                     >
                       <Play size={10} />
                     </button>
